@@ -5,6 +5,7 @@ permalink: /portfolio/aet/
 ---
 
 Things I'm proud of:
+
  - modular javascript
  - API integration with UKY Graduate Positioning Service (GPS)
  - Custom AJAX search powered by Views
