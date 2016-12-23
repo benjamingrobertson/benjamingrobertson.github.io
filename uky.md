@@ -16,4 +16,4 @@ The University of Kentucky wanted a better way for students to be able to explor
 
 The [academic exploration tool](http://www.uky.edu/academics) is what our design team came up with to solve this problem. When users land on the page, they are prompted with a few different ways to explore course information. They can search by interest (i.e. "I like to... spend time outside"), career path ("I want to be a doctor"), or they can do a keyword search ("biology"). They end up on a filterable results page that contains the results of their query. From there they can go on to get more info about their desired program, filter their results, or search again.
 
-My role in this project was lead developer. I led the front-end development effor as well as the development of the Drupal backend.
+My role in this project was lead developer. I led the front-end development effort as well as the development of the Drupal backend.
