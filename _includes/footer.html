@@ -1,11 +1,11 @@
-<footer class="site-footer">
+<footer class="site-footer layout-container">
 
   <div class="wrapper">
 
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+    <div class="grid">
+      <div class="grid__item">
         <ul class="contact-list">
           <li>
             {% if site.author %}
@@ -20,7 +20,7 @@
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
+      <div class="grid__item">
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
@@ -36,7 +36,7 @@
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
+      <div class="grid__item">
         <p>{{ site.description | escape }}</p>
       </div>
     </div>
