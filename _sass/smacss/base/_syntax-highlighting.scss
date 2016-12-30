@@ -2,13 +2,19 @@
  * Syntax highlighting styles
  */
 
+$syntax-hue: 220;
+$syntax-saturation: 13%;
+$syntax-brightness: 18%;
+
 .highlighter-rouge {
-    background-color: #eef;
+    background-color: rgb(41,44,51);
+    color: rgb(171,177,189);
     padding: .5em;
 }
 
 .highlight {
-  background: #eef;
+  background: rgb(41,44,51);
+  color: rgb(171,177,189);
   font-size: 1.2em;
   overflow-x: scroll;
   margin: 0;
@@ -16,11 +22,10 @@
   margin-bottom: 2em;
 
   .highlighter-rouge & {
-    background: #eef;
     margin: .5em;
   }
 
-  .c     { color: #998; font-style: italic } // Comment
+  .c     { color: rgb(93,99,111); font-style: italic } // Comment
   .err   { color: #a61717; background-color: #e3d2d2 } // Error
   .k     { font-weight: bold } // Keyword
   .o     { font-weight: bold } // Operator
