@@ -1,40 +1,71 @@
 html
-  font-family:  "Libre Baskerville"
+    font-family:  "Libre Baskerville"
+    background-color: #fffff8
+    color: #111
 
 
 h1,h2,h3,h4,h5,h6
-  font-family: 'Raleway', sans-serif
-  font-weight: 800
+    font-family: 'Raleway', sans-serif
+    font-weight: 800
 
 h1
-  font-weight: 900
+    font-weight: 900
 
 
 p
-  font-size: 1.1em
-  margin-top: 0
-  line-height: 1.75
-  margin-bottom: 1.5em
+    font-size: 1.1em
+    margin-top: 0
+    line-height: 1.75
+    margin-bottom: 1.5em
 
 
 .page-title
-  font-size: 4em
-  text-align: center
+    font-size: 4em
+    text-align: center
 
 
 .region-content a,
 .region-footer a
-  color: #1460aa
-  text-decoration: none
-  border-bottom: 1px solid #1460aa
-  padding-bottom: 3px
-  transition: color .2s ease-out
-  &:visited
-    border-color: #674172
-    color: #674172
+    color: #1460aa
+    text-decoration: none
+    border-bottom: 1px solid #1460aa
+    padding-bottom: 3px
+    transition: color .2s ease-out
+    &:visited
+        border-color: #674172
+        color: #674172
 
-  &:focus,
-  &:hover,
-  &:active
-    border-color: #d50000
-    color: #d50000
+    &:focus,
+    &:hover,
+    &:active
+        border-color: #d50000
+        color: #d50000
+
+
+/* Links: replicate underline that clears descenders */
+a:link,
+a:visited
+    color: inherit
+
+a:link
+    text-decoration: none
+    background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#333, #333)
+    background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333)
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px
+    background-repeat: no-repeat, no-repeat, repeat-x
+    text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8
+    background-position: 0% 93%, 100% 93%, 0% 93%
+
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+    a:link
+        background-position-y: 87%, 87%, 87%
+
+a:link::selection
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe
+        background: #b4d5fe
+
+a:link::-moz-selection
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe
+    background: #b4d5fe
