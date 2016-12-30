@@ -91,5 +91,3 @@ To run it on a folder:
 `svgo -f ../path/to/folder/with/svg/files --pretty --enable=sortAttrs`
 
 ... and BAM! all your svgs are optimized and ready to use. Here's the full documentation: [SVGO](https://github.com/svg/svgo)
-
-</div>
