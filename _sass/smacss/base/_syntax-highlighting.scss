@@ -10,8 +10,10 @@
 .highlight {
   background: #eef;
   font-size: 1.2em;
-  margin-bottom: 2em;
   overflow-x: scroll;
+  margin: 0;
+  padding: .5em;
+  margin-bottom: 2em;
 
   .highlighter-rouge & {
     background: #eef;
