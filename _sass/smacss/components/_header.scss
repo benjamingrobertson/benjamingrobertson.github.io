@@ -34,10 +34,13 @@
   font-family: "Raleway";
   font-weight: 900;
 
-  &:hover{
-    .logo__letter{margin-left: 0;}
-    .logo__letter--one{width: 183px;}
-    .logo__letter--two{width: 26px;}
-    .logo__letter--three{width: 195px;}
+  @include bp(medium) {
+      &:hover{
+        .logo__letter{margin-left: 0;}
+        .logo__letter--one{width: 183px;}
+        .logo__letter--two{width: 26px;}
+        .logo__letter--three{width: 195px;}
+      }
   }
+
 }
