@@ -1,0 +1,27 @@
+$small-up: "(min-width: 544px)"
+$medium-up: "(min-width: 768px)"
+$large-up: "(min-width: 992px)"
+$xlarge-up: "(min-width: 1200px)"
+
+$grid-breakpoints: (small: 544px, medium: 768px, large: 992px, xlarge: 1200px) !default
+
+@mixin bp($size)
+    @if $size == small
+        @media #{$small-up}
+            @content
+
+    @else if $size == medium
+        @media #{$medium-up}
+            @content
+
+    @else if $size == large
+        @media #{$large-up}
+            @content
+
+    @else if $size == xlarge
+        @media #{$xlarge-up}
+            @content
+
+    @else
+        @media #{$size}
+            @content
