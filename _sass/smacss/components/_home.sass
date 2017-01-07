@@ -8,12 +8,13 @@
     margin: 0 auto
 
 
-h1.opening
+.home__title
     width: 95%
     margin: 1em auto
     font-size: 3em
     line-height: 1
     text-align: center
+    margin-bottom: .4em
 
     +bp(small)
         font-size: 4em
@@ -21,32 +22,35 @@ h1.opening
     +bp(medium)
         font-size: 6em
 
+.home__caption
+    text-align: center
+    font-size: 2em
+    font-family: Raleway
 
-.home-nav
+.home__nav
     display: flex
     flex-wrap: wrap
     justify-content: center
     padding: 0
     margin: 0
 
+    .menu-item
+        list-style: none
+        text-align: center
+        text-transform: lowercase
+        font-size: 3em
+        font-family: "Raleway", sans-serif
+        margin: 0 auto .5em
 
-.home-nav .menu-item
-    list-style: none
-    text-align: center
-    text-transform: lowercase
-    font-size: 3em
-    font-family: "Raleway", sans-serif
-    margin: 0 auto .5em
+        flex: 0 0 100%
 
-    flex: 0 0 100%
+        +bp(small)
+            flex: 1
 
-    +bp(small)
-        flex: 1
-
-    a
-        color: black
-
+        a
+            color: black
 
 
-.home-nav__grid
+
+.home__nav__grid
     padding-left: 0
