@@ -1,11 +1,23 @@
-html
+@mixin font-primary
     font-family:  "Libre Baskerville", serif
-    background-color: #fffff8
-    color: #111
 
-
-h1,h2,h3,h4,h5,h6
+@mixin font-display
     font-family: 'Raleway', sans-serif
+
+
+html
+    +font-primary
+    background-color: $white
+    color: $black
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    +font-display
     font-weight: 800
 
 h1
