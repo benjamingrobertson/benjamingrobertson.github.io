@@ -1,27 +1,37 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<div class="home">
-    <h1 class="opening">
-        <span>benjamin</span>
-        <span>gene</span>
-        <span>robertson</span>
-    </h1>
+  {% include head.html %}
 
-  <nav>
-    <ul class="home-nav">
-        <!-- <li class="menu-item">
-            <a href="/work">Work</a>
-        </li> -->
-        <li class="menu-item">
-            <a href="/about">About</a>
-        </li>
-        <li class="menu-item">
-            <a href="/blog">Blog</a>
-        </li>
+  <body>
 
-    </ul>
-  </nav>
+    <main class="layout-container" aria-label="Content">
+        <div class="home">
+            <h1 class="opening">
+                <span>benjamin</span><br />
+                <span>robertson</span>
+            </h1>
 
-</div>
+          <nav>
+            <ul class="home-nav">
+                <!-- <li class="menu-item">
+                    <a href="/work">Work</a>
+                </li> -->
+                <li class="menu-item">
+                    <a href="/about">About</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/blog">Blog</a>
+                </li>
+
+            </ul>
+          </nav>
+
+        </div>
+
+    </main>
+
+
+  </body>
+
+</html>
