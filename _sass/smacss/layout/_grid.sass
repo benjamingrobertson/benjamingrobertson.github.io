@@ -1,6 +1,10 @@
 .grid
     display: flex
+    flex-wrap: wrap
 
 
 .grid__item
-    flex: 1
+    flex: 0 0 100%
+
+    +bp(small)
+        flex: 1
