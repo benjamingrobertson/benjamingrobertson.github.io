@@ -63,7 +63,7 @@ then close the svg tag: `</svg>`.
 
 Inside the `<svg>` tag, create a symbol tag, and give it an id that's descriptive and easy to type, like this:
 
-{% highlight svg %}
+{% highlight html %}
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
     <symbol id="arrow">
@@ -74,7 +74,7 @@ Inside the `<svg>` tag, create a symbol tag, and give it an id that's descriptiv
 
 Now open your optimized SVG file for this particular SVG. My `arrow.svg` file looks like this:
 
-{% highlight svg %}
+{% highlight html %}
 
 <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 39.4 31.4">
   <style>
@@ -88,7 +88,7 @@ Now open your optimized SVG file for this particular SVG. My `arrow.svg` file lo
 
 We are going to ignore the SVG wrapper and the style tag, and just copy the two path tags into our `svg-defs.svg` file, so it looks like this now:
 
-{% highlight svg %}
+{% highlight html %}
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
     <symbol id="arrow">
         <path id="XMLID_3_" d="M23.7 31.4L22.3 30l14.3-14.3L22.3 1.4 23.7 0l15.7 15.7z" class="st0"/>
@@ -99,7 +99,7 @@ We are going to ignore the SVG wrapper and the style tag, and just copy the two 
 
 Then we need to grab the viewBox attribute from our original SVG and add it to the symbol tag. Here's our finished product:
 
-{% highlight svg %}
+{% highlight html %}
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
     <symbol id="arrow" viewBox="0 0 39.4 31.4">
         <path id="XMLID_3_" d="M23.7 31.4L22.3 30l14.3-14.3L22.3 1.4 23.7 0l15.7 15.7z" class="st0"/>
@@ -124,7 +124,7 @@ Now that you have your `svg-defs.svg` file set up, you can start referencing the
 
 Do that in your header, before you you need to use any of the SVGs on the page. Now that your SVGs are ready for use, you can reference them. We reference them by creating an `<svg>` tag, and then inside that we place a `<use>` tag with an `xlink:href` attribute. Here's what it looks like:
 
-{% highlight svg %}
+{% highlight html %}
 
 <svg class="arrow-icon" width="30px" height="30px">
     <use xlink:href="#arrow"></use>
@@ -134,7 +134,7 @@ Do that in your header, before you you need to use any of the SVGs on the page. 
 
 Do it on one line for cleaner code:
 
-{% highlight svg %}
+{% highlight html %}
 
 <svg class="arrow-icon icon" width="30px" height="30px"><use xlink:href="#arrow"></use></svg>
 
