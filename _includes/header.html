@@ -1,5 +1,5 @@
 <header class="site-header" role="banner">
-    <div class="layout-container">
+    <div class="layout-container header__nav">
         <a href="/" class="brand-logo no-decoration">
             <span class="logo__letter logo__letter--one">
                 b<span class="logo__hide">enjamin </span>
@@ -12,9 +12,9 @@
             </span>
         </a>
 
-        <nav class="site-nav">
-            <a class="page-link" href="/about">about</a>
-            <a class="page-link" href="/blog">blog</a>
+        <nav>
+            <a class="page-link no-decoration" href="/about">about</a>
+            <a class="page-link no-decoration" href="/blog">blog</a>
             <!-- <div class="trigger">
                 {% for my_page in site.pages %} {% if my_page.title %}
                 <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a> {% endif %} {% endfor %}
