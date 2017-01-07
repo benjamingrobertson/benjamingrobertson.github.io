@@ -1,50 +1,82 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
 Hi, I’m Ben, a friendly web developer for [Up&Up](https://upandup.agency) in Greenville, SC. In my free time I enjoy biking, hiking, gardening, exploring Greenville, learning new things, and hanging out at our awesome public library.
 
-I specialize in creating fun, innovative, accessible, and fast web experiences for end users and the people who serve them. This includes [award-winning](https://www.upandup.agency/awards/upup-wins-ucda-excellence-award-university-kentucky-website) front-end development as well as building out custom Drupal and Wordpress backends with an eye towards usability.
+I create fun, innovative, accessible, and fast websites. This includes [award-winning](https://www.upandup.agency/awards/upup-wins-ucda-excellence-award-university-kentucky-website) front-end development as well as building out custom Drupal and Wordpress backends with an eye towards usability.
+
+<hr>
 
 ## Experience
 
 ### Up&Up Agency
 **Front End Developer** \| February 2015 - Present
 
-Technologies:
-Javascript, jQuery, React.js, Sass, CSS, Wordpress, Drupal, PHP, CakePHP, Python, Django, Grunt, Webpack
+Key Responsibilities:
 
-<hr>
+ - Transform static design comps into fast, accessible, interactive, maintainable HTML/CSS/Javascript
+
+ - Develop efficient, user-friendly backend content management systems
+
+ - Integrate front-end development products with content management systems.
+
+Technologies Used:
+
+<div class="grid">
+    <div class="grid__item">
+        <ul>
+            <li>HTML</li>
+            <li>Sass</li>
+            <li>CSS</li>
+            <li>SVG</li>
+            <li>Javascript</li>
+            <li>React.js</li>
+            <li>Grunt</li>
+            <li>Webpack</li>
+        </ul>
+    </div>
+    <div class="grid__item">
+        <ul>
+            <li>Wordpress</li>
+            <li>jQuery</li>
+            <li>Drupal</li>
+            <li>PHP</li>
+            <li>CakePHP</li>
+            <li>Python</li>
+            <li>Django</li>
+        </ul>
+    </div>
+</div>
 
 ### Freelance
 **Wordpress / Frontend Developer** \| October 2014 - Present
 
-<hr>
 
 ### Gannett
 **Digital Strategist** \| October 2013 - September 2014
 
-<hr>
 
 ### Chicago Tribune
 **Digital Advertising Sales Consultant** \| February 2012 - September 2013
 
 <hr>
 
+## Side Projects / Volunteering
 
+### Second Nature Journal
+I started and run (with the help of some friends) an online journal for critical thinking about technology and new media in light of the Christian tradition, [Second Nature](https://secondnaturejournal.com/). We've been running since 2013. I'm an editor and jack-of-all trades.
 
-## Side Projects
+### IISTC
+The IISTC ([International Institute for the Study of Technology and Christianity](https://iistc.org/)) is the non-profit we started to publish Second Nature. I'm an executive director.
 
-## Where am I from?
+### Engaged Encounter
+My lovely wife and I are presenting couples for [South Carolina Catholic Engaged Encounter](http://www.cee-sc.org/). We provide weekend-long marriage preparation retreats for engaged couples. I am also the treasurer.
 
-I was born in North Carolina but raised all over–including Tokyo, Beijing, Chicagoland, and even New England. I like to think that moving and traveling in my childhood taught me some of the most invaluable lessons in life, but I still went to get a BA in Communications and Media Studies from Wheaton College in Illinois.
+<hr>
 
-## Where have I worked?
+## About this site
 
-I’ve worked for major media companies like the Chicago Tribune, Apartments.com, Cars.com and Gannett Company doing marketing consulting and advertising sales. I’ve even started my own publishing venture, Second Nature Journal, as well as a non-profit institute just for fun. Check out my LinkedIn profile if you’d like some more details.
-
-## What can I do?
-
-I build fast, interactive, responsive websites using a variety of tools. My favorite toolset includes using SCSS with Compass, jQuery, and HTML5. My responsibilities at Up&Up range from doing a complete front-end to integrating a front-end and backend setup, to even developing a backend in Wordpress or Drupal.
+This site is a simple, responsive [Jekyll](http://jekyllrb.com/) theme I designed and built using the Minima theme as the initial structure. My display font is [Raleway Extra-Bold](https://fonts.google.com/specimen/Raleway) and the body font is [Libre Baskerville](https://fonts.google.com/specimen/Libre+Baskerville). Fonts are served from Google Fonts. I borrowed my link styles from the [Tufte CSS](https://github.com/edwardtufte/tufte-css) project.
