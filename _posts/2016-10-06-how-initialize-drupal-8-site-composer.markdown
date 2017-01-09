@@ -52,4 +52,4 @@ RewriteRule (.*) web/$1 [L]
 
 ## Bonus: Install modules
 
-Install modules like this: `composer require drupal/modulename:~8.0`
+Install modules like this: `composer require drupal/modulename`
