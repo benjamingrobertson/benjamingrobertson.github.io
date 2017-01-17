@@ -62,13 +62,12 @@ Since we aren't using brackets, this keeps the Sass clearer and also is aligned 
 
 Selectors and properties each get their own line. Do it like this:
 
-<div class="highlight">
 
-    .container
-        width: 95%
-        max-width: 40em
-
-</div>
+{% highlight sass %}
+.container
+    width: 95%
+    max-width: 40em
+{% endhighlight %}
 
 ### Meaningful use of white space
 
@@ -76,19 +75,19 @@ White space can give context to class definitions. Include two empty lines betwe
 
 Example:
 
-<div class="highlight">
 
-    .card
-        padding: 1rem
-        margin: 1rem
+{% highlight sass %}
+.card
+    padding: 1rem
+    margin: 1rem
 
-        &__header // leave one empty line above this since it is nested
-            border-bottom: 1px solid gray
+    &__header // leave one empty line above this since it is nested
+        border-bottom: 1px solid gray
 
-    .card--white // two empty lines above this new class block
-        background-color: white
+.card--white // two empty lines above this new class block
+    background-color: white
+{% endhighlight %}
 
-</div>
 
 ### Nesting Depth
 
@@ -96,13 +95,11 @@ Nesting depth should be limited to 2.
 
 Example:
 
-<div class="highlight">
-
-    .block
-        &__element
-            &--modifier // Deepest Nest Allowed
-
-</div>
+{% highlight sass %}
+.block
+    &__element
+        &--modifier // Deepest Nest Allowed
+{% endhighlight %}
 
 ### Limit line length to 80 characters
 
