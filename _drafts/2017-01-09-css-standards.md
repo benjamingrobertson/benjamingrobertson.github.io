@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "CSS Standards and Normalization"
-date:   2016-01-09 00:00:00 -0500
+date:   2017-01-09 00:00:00 -0500
 categories: front-end
 ---
 
