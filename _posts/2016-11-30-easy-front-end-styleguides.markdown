@@ -9,7 +9,7 @@ Our main requisites for a style guide generator were not wanting to maintain a s
 
 Based on those prerequisites, here's the quickest way to a maintainable style guide that I've found.
 
-The main functionality is provided by [kss-node](#). We use [Michelangelo](#) to provide some theming and a really nifty color grid. [grunt-kss](#) handles the compiling of the style guide during dev and on deployment.
+The main functionality is provided by [kss-node](https://github.com/kss-node/kss-node). We use [Michelangelo](https://github.com/stamkracht/michelangelo) to provide some theming and a really nifty color grid. [grunt-kss](https://github.com/soenkeschnoor/grunt-kss) handles the compiling of the style guide during dev and on deployment.
 
 This setup generates a static style guide inside your existing web project. It's based completely off of comments in your sass. I see two benefits in this. The first is that we don't have to maintain a separate code base for the style guide. The second is that even if you aren't looking in the style guide, the comments live in the code so they are highly visible in development.
 
@@ -99,7 +99,7 @@ By default, this setup will look for a `homepage.md` file in your css src direct
 
 ### Color block
 
-The nifty color block I mentioned above is specific to the `Michelango` layer on top of `kss-node`. The documentation for it is available [here](#). Note that it only accepts hexadecimal values.
+The nifty color block I mentioned above is specific to the `Michelango` layer on top of `kss-node`. The documentation for it is available [here](https://www.npmjs.com/package/michelangelo#michelangelo-specifications). Note that it only accepts hexadecimal values.
 
 ## Conclusion
 
