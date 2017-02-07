@@ -1,3 +1,19 @@
 .post-title
     font-size: 3em
     text-align: center
+
+.heading__anchor-link
+    opacity: 0
+    display: inline-block
+    font-size: .5em
+    margin-left: 1em
+    vertical-align: middle
+    transition: opacity .2s, transform .2s
+    transform: translateY(100%)
+
+.post-content h2:hover,
+.post-content h3:hover
+
+    .heading__anchor-link
+        opacity: 1
+        transform: translateY(0)
