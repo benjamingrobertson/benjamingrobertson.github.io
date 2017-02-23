@@ -1,11 +1,13 @@
 ---
 layout: post
 title:  "CSS Standards and Normalization"
-date:   2017-01-09 00:00:00 -0500
+date:   2017-02-23 00:00:00 -0500
 categories: front-end
 ---
 
+This is the Up&Up CSS / Sass styleguide that I wrote up for our team. I started work on it in the fall of 2016 and we have been rolling it out to all new projects. After writing CSS / SCSS / Sass for a few years now, I really enjoyed sitting down and reflecting on how I have been writing it, how the team has been writing it, and how we could work better together by being intentional about how we write our code.
 
+I'm publishing it here for the purpose of showing how a team develop their own code style guide that works for them and to show the thought process behind it. A lot of the thoughts behind this were a result of a whole-site CSS refactor for one of our clients.
 
 ## Purpose
 
@@ -107,31 +109,29 @@ This helps make the code more readable without horizontal scrolling. Because you
 
 Example:
 
-<div class="highlight">
-
+{% highlight sass %}
     // This file is where you override default Bootstrap variables. You
     // can find a list of the default Bootstrap variables
     // in _variables.scss
-
-</div>
+{% endhighlight %}
 
 ### Use single line comments
 
 Your comments don't have to be on one single line, just don't use `/* These kinds of comments */`, because they will end up in the compiled css. Your comments, even if they are multi-line, should look like this:
 
-<div class="highlight">
+{% highlight sass %}
 
     // This file is where you override default Bootstrap variables. You
     // can find a list of the default Bootstrap variables
     // in _variables.scss
 
-</div>
+{% endhighlight %}
 
 ### Clean Import paths
 
 You don't need to include leading underscores or filename extensions in your import paths. To stay consistent, your imports should look like this:
 
-<div class="highlight">
+{% highlight sass %}
 
     @import "base/typography" // where this file is base/_typography.sass
     @import "base/colors"
@@ -139,7 +139,7 @@ You don't need to include leading underscores or filename extensions in your imp
     @import "layout/grid"
     @import "layout/containers"
 
-</div>
+{% endhighlight %}
 
 ### Class Name Format
 
@@ -151,7 +151,7 @@ We will use a BEM-style class naming system. BEM stands for Block Element Modifi
 
 Examples:
 
-<div class="highlight">
+{% highlight sass %}
 
     .block
         .block--modifier
@@ -174,11 +174,11 @@ Examples:
         .site-header__bottom // the bottom portion of the site header
         .site-header--admin // variant of site-header
 
-</div>
+{% endhighlight %}
 
 Additionally, limit your BEM depth to 1\. This means that blocks should not have nested elements. If there are elements nested inside of elements, start a new block.
 
-<div class="highlight">
+{% highlight sass %}
 
     // Don't do this
     .block__element__sub-element
@@ -188,7 +188,7 @@ Additionally, limit your BEM depth to 1\. This means that blocks should not have
         &__sub-element
             &__sub-element-2
 
-</div>
+{% endhighlight %}
 
 Consider name-spacing layout and javascript specific classes.
 
@@ -196,7 +196,7 @@ For instance, instead of using a class name like `.container`, you could use `.l
 
 Or for javascript that is manipulating the DOM, use something like `.js-behavior-hook` instead of `.behavior-hook` to make sure that it is a dedicated class not used for styling.
 
-_Source: [Drupal 8 CSS Architecture | Class Name Formatting](https://www.drupal.org/docs/develop/standards/css/css-architecture-for-drupal-8#formatting)_
+Source: [Drupal 8 CSS Architecture \| Class Name Formatting](https://www.drupal.org/docs/develop/standards/css/css-architecture-for-drupal-8#formatting)_
 
 ### Avoid Using id Selectors
 
