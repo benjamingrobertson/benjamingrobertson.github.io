@@ -3,6 +3,7 @@ layout: post
 title:  "How to Make a Front End Style Guide, the Easy Way"
 date:   2016-11-30 00:00:00 -0500
 categories: front-end
+snippet: "Spoiler alert: use kss-node"
 ---
 
 Our main requisites for a style guide generator were not wanting to maintain a separate code base, ease of updating the style guide, and ease in accessing the style guide.

@@ -1,41 +1,71 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {% include head.html %}
+    {% include head.html %}
 
-  <body>
-
-    <main class="layout-container" aria-label="Content">
-        <div class="home">
-            <h1 class="home__title">
-                <span>benjamin</span><br />
-                <span>robertson</span>
-            </h1>
-
-            <p class="home__caption">
-                a friendly web developer
+    <body>
+        <header class="home__header">
+            <h1>Ben Robertson</h1>
+            <p>
+                Web developer.
             </p>
+        </header>
+        <main class="home">
+            <section class="grid-item about">
+                <header class="section-header">
+                    <h2>About Me</h2>
+                    <hr>
+                </header>
+                <p>Hi, I’m Ben, a friendly web developer for Up&amp;Up in Greenville, SC. In my free time I enjoy biking, hiking, gardening, exploring Greenville, learning new things, and hanging out at our awesome public library.</p>
 
-          <nav>
-            <ul class="home__nav">
-                <!-- <li class="menu-item">
-                    <a href="/work">Work</a>
-                </li> -->
-                <li class="menu-item">
-                    <a href="/about">About</a>
-                </li>
-                <li class="menu-item">
-                    <a href="/blog">Blog</a>
-                </li>
-
-            </ul>
-          </nav>
-
-        </div>
-
-    </main>
-
-
-  </body>
+                <p>I create fun, innovative, accessible, and fast websites. This includes award-winning front-end development as well as building out custom Drupal and Wordpress backends with an eye towards usability.
+                </p>
+                <a href="/about">read more about me</a>
+            </section>
+            <section class="grid-item micro-blog">
+                <header class="section-header">
+                    <h2>Updates</h2>
+                    <hr>
+                </header>
+                {% assign updates = site.updates | reverse %}
+                {% for update in updates limit: 5 %}
+                        <article class="snippet">
+                            {{update.content}}
+                            <date> - {{ update.date | date: "%b %-d, %Y" }}</date>
+                        </article>
+                {% endfor %}
+            </section>
+            <section class="grid-item blog">
+                <header class="section-header">
+                    <h2>Blog</h2>
+                    <hr>
+                </header>
+                {% for post in site.posts limit: 5 %}
+                    <article class="home__article">
+                        <header>
+                            <h3>{{ post.title | escape }}</h3>
+                            <date> - {{ post.date | date: "%b %-d, %Y" }}</date>
+                        </header>
+                        <p>{{post.snippet}}</p>
+                        <a href="{{ post.url | relative_url }}">Read More</a>
+                    </article>
+                {% endfor %}
+        </section>
+            <section class="grid-item work">
+                <header class="section-header">
+                    <h2>Work</h2>
+                    <hr>
+                </header>
+                {% assign work = site.work | reverse %}
+                {% for work in work limit: 5 %}
+                    <article>
+                        <h3>{{ work.title | escape }}</h3>
+                        <!-- <p>{{post.short-description}}</p> -->
+                        <a href="{{ work.url | relative_url }}">Read More</a>
+                    </article>
+                {% endfor %}
+            </section>
+        </main>
+    </body>
 
 </html>

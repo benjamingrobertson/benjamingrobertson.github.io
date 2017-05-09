@@ -3,6 +3,7 @@ layout: post
 title:  "Allow Audio in Wordpress Excerpt"
 date:   2017-03-17 00:00:00 -0500
 categories: wordpress
+snippet: "This week for a client project I had a need to be able to display more than just text in a post excerpt."
 ---
 
 This week for a client project I had a need to be able to display more than just text in a post excerpt. We created a custom post type for them called 'Podcasts', and in each post, they have a text introduction to the podcast, an audio embed added through the Wordpress WYSIWYG, and then the transcript of the podcast.

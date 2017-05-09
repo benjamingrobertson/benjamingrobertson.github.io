@@ -25,6 +25,12 @@ github_username:  benjamingrobertson
 disqus:
   shortname: benjamin-robertson
 
+collections:
+  work:
+    output: true
+  updates:
+    output: false
+
 # Build settings
 markdown: kramdown
 # theme: minima

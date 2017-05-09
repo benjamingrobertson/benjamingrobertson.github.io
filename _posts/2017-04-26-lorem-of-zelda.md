@@ -3,6 +3,7 @@ layout: post
 title:  "A Legend of Zelda Lorem Ipsum Generator"
 date:   2017-04-26 00:00:00 -0500
 categories: work
+snippet: "For fun, I made a Legend of Zelda lorem ipsum / placeholder text generator."
 ---
 
 <a href="http://loremofzelda.com"><img src="/assets/img/lorem-of-zelda.png" style="float:right;margin: 0 1em;"/></a>
