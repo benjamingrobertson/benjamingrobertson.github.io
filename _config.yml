@@ -25,6 +25,8 @@ github_username:  benjamingrobertson
 disqus:
   shortname: benjamin-robertson
 
+permalink: /:categories/:title
+
 collections:
   work:
     output: true

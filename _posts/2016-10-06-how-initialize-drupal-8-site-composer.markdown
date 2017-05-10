@@ -3,6 +3,7 @@ layout: post
 title:  "How to Initialize a Drupal 8 Site with Composer"
 date:   2016-10-06 00:00:00 -0500
 categories: drupal
+snippet: "Hold on to your butts"
 ---
 
 After spinning up a few Drupal 8 sites in the past couple weeks, I think I've finally got the Composer workflow going. Here are the steps I follow for setting up a new Drupal 8 site with Composer.

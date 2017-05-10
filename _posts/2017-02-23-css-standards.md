@@ -3,7 +3,7 @@ layout: post
 title:  "CSS Standards and Normalization"
 date:   2017-02-23 00:00:00 -0500
 categories: front-end
-snippet: "A CSS styleguide I wrote for me and the team at Up&amp;Up."
+snippet: "A CSS styleguide I wrote for the dev team at Up&amp;Up."
 ---
 
 This is the Up&Up CSS / Sass styleguide that I wrote up for our team. I started work on it in the fall of 2016 and we have been rolling it out to all new projects. After writing CSS / SCSS / Sass for a few years now, I really enjoyed sitting down and reflecting on how I have been writing it, how the team has been writing it, and how we could work better together by being intentional about how we write our code.

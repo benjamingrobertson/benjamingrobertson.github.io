@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
 
     {% include head.html %}
 
@@ -7,7 +7,7 @@
         <header class="home__header">
             <h1>Ben Robertson</h1>
             <p>
-                Web developer.
+                Web developer. Gardener. Blues Brother 🕶.
             </p>
         </header>
         <main class="home">
@@ -20,7 +20,8 @@
 
                 <p>I create fun, innovative, accessible, and fast websites. This includes award-winning front-end development as well as building out custom Drupal and Wordpress backends with an eye towards usability.
                 </p>
-                <a href="/about">read more about me</a>
+                <hr />
+                <a href="/about">More About Me >></a>
             </section>
             <section class="grid-item micro-blog">
                 <header class="section-header">
@@ -43,14 +44,17 @@
                 {% for post in site.posts limit: 5 %}
                     <article class="home__article">
                         <header>
-                            <h3>{{ post.title | escape }}</h3>
+                            <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
                             <date> - {{ post.date | date: "%b %-d, %Y" }}</date>
                         </header>
                         <p>{{post.snippet}}</p>
                         <a href="{{ post.url | relative_url }}">Read More</a>
                     </article>
                 {% endfor %}
-        </section>
+                <hr />
+                <a href="/blog">More Blog Posts >></a>
+            </section>
+            <!-- Coming soon 👀
             <section class="grid-item work">
                 <header class="section-header">
                     <h2>Work</h2>
@@ -60,11 +64,11 @@
                 {% for work in work limit: 5 %}
                     <article>
                         <h3>{{ work.title | escape }}</h3>
-                        <!-- <p>{{post.short-description}}</p> -->
+                        <p>{{work.snippet}}</p>
                         <a href="{{ work.url | relative_url }}">Read More</a>
                     </article>
                 {% endfor %}
-            </section>
+            </section> -->
         </main>
     </body>
 

@@ -1,12 +1,9 @@
-body
-    width: 90%
-    margin: 8em auto 0
-
 main.home
     @media (min-width: 992px)
         display: grid
         grid-gap: 2.5em
-        grid-template-columns: 3fr 1.25fr 1.75fr 1.75fr
+        grid-template-columns: 1.75fr 1.25fr 1.75fr
+        // grid-template-columns: 3fr 1.25fr 1.75fr 1.75fr
 
 .about
     font-size: 1.25rem
@@ -47,6 +44,14 @@ main.home
     date
         color: rgba(black, .5)
 
+    a:not(.post-link)
+        +link($highlight-blue)
+
+        &:hover
+            background-color: #ffd897
+            text-shadow: 0.03em 0 #ffd897, -0.03em 0 #ffd897, 0 0.03em #ffd897, 0 -0.03em #ffd897, 0.06em 0 #ffd897, -0.06em 0 #ffd897, 0.09em 0 #ffd897, -0.09em 0 #ffd897, 0.12em 0 #ffd897, -0.12em 0 #ffd897, 0.15em 0 #ffd897, -0.15em 0 #ffd897
+
+
 
 article
     h3
@@ -59,23 +64,24 @@ article
     h2
         margin-bottom: .75rem
 
-    hr
-        border: 0
-        height: 5px
-        width: 10%
-        max-width: 50px
-        margin-top: 0
-        text-align: left
-        margin-left: 0
-        margin-bottom: 1rem
-        background-color: black
-
 .snippets
     border-bottom: 0
 
 .snippet
     font-size: .85rem
-    
+
     p
         display: inline
         margin-bottom: 0
+
+
+hr
+    border: 0
+    height: 5px
+    width: 10%
+    max-width: 50px
+    margin-top: 0
+    text-align: left
+    margin-left: 0
+    margin-bottom: 1rem
+    background-color: $black

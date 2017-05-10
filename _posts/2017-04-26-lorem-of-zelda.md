@@ -10,7 +10,7 @@ snippet: "For fun, I made a Legend of Zelda lorem ipsum / placeholder text gener
 
 For fun, I made a [Legend of Zelda lorem ipsum / placeholder text generator](http://loremofzelda.com).
 
-I had a project that had zero content going into development and so I fun generating content like this:
+I had a project that had zero content going into development and so had I fun generating content like this:
 
 ![Some sample content from http://loremofzelda.com](/assets/img/zelda-sample.png)
 

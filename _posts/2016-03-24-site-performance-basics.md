@@ -3,6 +3,7 @@ layout: post
 title:  "Site Performance Basics"
 date:   2016-03-24 00:00:00 -0500
 categories: front-end
+snippet: "Some pointers on measuring performance and small .htaccess tweaks you can make to boost performance right now."
 ---
 
 This post is on basic site performance tweaks that we make on every site we work on over at Up&Up. We try to keep it updated as our work progresses, but here it is as of now:

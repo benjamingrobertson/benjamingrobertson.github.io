@@ -3,6 +3,7 @@ layout: post
 title:  "SVG Workflow"
 date:   2016-03-24 00:00:00 -0500
 categories: front-end
+snippet: "How to use SVG for maintainability, performance, and profit."
 ---
 
 When working with web images at Up&Up, we like to use SVG as much as possible. Because they are scalable, they look good everywhere. And because we can include them inline we can make our sites faster and more performant by limiting the amount of requests we make using images.
