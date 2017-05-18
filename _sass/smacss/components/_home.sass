@@ -49,12 +49,7 @@ main.home
         color: rgba(black, .5)
 
     a:not(.post-link)
-        +link($highlight-blue)
-
-        &:hover
-            background-color: #ffd897
-            text-shadow: 0.03em 0 #ffd897, -0.03em 0 #ffd897, 0 0.03em #ffd897, 0 -0.03em #ffd897, 0.06em 0 #ffd897, -0.06em 0 #ffd897, 0.09em 0 #ffd897, -0.09em 0 #ffd897, 0.12em 0 #ffd897, -0.12em 0 #ffd897, 0.15em 0 #ffd897, -0.15em 0 #ffd897
-
+        @extend %defaultLink
 
 
 article
@@ -78,6 +73,9 @@ article
         display: inline
         margin-bottom: 0
 
+    a
+        @extend %defaultLink
+
 
 hr
     border: 0
@@ -89,3 +87,8 @@ hr
     margin-left: 0
     margin-bottom: 1rem
     background-color: $black
+
+
+.home
+    hr + a
+        @extend %defaultLink

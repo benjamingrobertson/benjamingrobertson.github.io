@@ -43,7 +43,7 @@ strong
 
 
 // Links: replicate underline that clears descenders
-a:link,
+a,
 a:visited
     color: inherit
 
@@ -58,30 +58,39 @@ a:visited
     color: $color
 
 
-a:link
+
+%defaultLink
+    +link($highlight-blue)
+
+    &:hover
+        background-color: #ffd897
+        text-shadow: 0.03em 0 #ffd897, -0.03em 0 #ffd897, 0 0.03em #ffd897, 0 -0.03em #ffd897, 0.06em 0 #ffd897, -0.06em 0 #ffd897, 0.09em 0 #ffd897, -0.09em 0 #ffd897, 0.12em 0 #ffd897, -0.12em 0 #ffd897, 0.15em 0 #ffd897, -0.15em 0 #ffd897
+
+
+a
     text-decoration: none
     text-shadow: 0.03em 0 $white, -0.03em 0 $white, 0 0.03em $white, 0 -0.03em $white, 0.06em 0 $white, -0.06em 0 $white, 0.09em 0 $white, -0.09em 0 $white, 0.12em 0 $white, -0.12em 0 $white, 0.15em 0 $white, -0.15em 0 $white
     +link($black)
 
-a:link::selection
+a:selection
     text-shadow: 0.03em 0 #ffd897, -0.03em 0 #ffd897, 0 0.03em #ffd897, 0 -0.03em #ffd897, 0.06em 0 #ffd897, -0.06em 0 #ffd897, 0.09em 0 #ffd897, -0.09em 0 #ffd897, 0.12em 0 #ffd897, -0.12em 0 #ffd897, 0.15em 0 #ffd897, -0.15em 0 #ffd897
     background: #ffd897
 
 
-a:link::-moz-selection
+a:-moz-selection
     text-shadow: 0.03em 0 #ffd897, -0.03em 0 #ffd897, 0 0.03em #ffd897, 0 -0.03em #ffd897, 0.06em 0 #ffd897, -0.06em 0 #ffd897, 0.09em 0 #ffd897, -0.09em 0 #ffd897, 0.12em 0 #ffd897, -0.12em 0 #ffd897, 0.15em 0 #ffd897, -0.15em 0 #ffd897
     background: #ffd897
 
 
 .no-decoration,
-a:link.no-decoration
+a.no-decoration
     text-decoration: none
     background: 0 !important
     text-shadow: initial
 
 
 @media screen and (-webkit-min-device-pixel-ratio: 0)
-    a:link
+    a
         background-position-y: 87%, 87%, 87%
 
 
@@ -95,6 +104,6 @@ blockquote
     p:last-of-type
         margin-bottom: 0
 
-    a:link
+    a
         text-shadow: 0.03em 0 #e5e5e5, -0.03em 0 #e5e5e5, 0 0.03em #e5e5e5, 0 -0.03em #e5e5e5, 0.06em 0 #e5e5e5, -0.06em 0 #e5e5e5, 0.09em 0 #e5e5e5, -0.09em 0 #e5e5e5, 0.12em 0 #e5e5e5, -0.12em 0 #e5e5e5, 0.15em 0 #e5e5e5, -0.15em 0 #e5e5e5
         // text-shaodw: none
