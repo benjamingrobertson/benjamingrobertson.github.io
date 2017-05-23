@@ -27,6 +27,8 @@ disqus:
 
 permalink: /:categories/:title
 
+google_analytics: UA-43172667-3
+
 
 collections:
   work:
