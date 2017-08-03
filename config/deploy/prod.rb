@@ -43,14 +43,6 @@ namespace :deploy do
     run "touch #{current_path}/tmp/restart.txt"
   end
 
-  task :update_jekyll do
-    on roles(:app) do
-      within "#{deploy_to}/current" do
-      	execute :jekyll, "build"
-      end
-    end
-  end
-
   [:start, :stop].each do |t|
     desc "#{t} task is a no-op with mod_rails"
     task t, :roles => :app do ; end
@@ -62,9 +54,6 @@ after "deploy:symlink:release", "deploy:update_jekyll"
 # Optional tasks ##########################################################################################
 # for use with shared files (e.g. config files)
 after "deploy:update_code" do
-#  run "ln -s #{shared_path}/uploads #{release_path}/wp-content"
-#  run "ln -s #{shared_path}/wp-config.php #{release_path}/wp-config.php"
-#  run "ln -s #{shared_path}/wp_db_sync #{release_path}"
-#  run "(cd #{release_path}/wp-content/themes/fsu/scss/; compass compile -c config.rb style.scss)"
+    run "cd #{release_path} && jekyll build"
 end
 after "deploy", "deploy:cleanup"
