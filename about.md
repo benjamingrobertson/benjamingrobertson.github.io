@@ -6,7 +6,16 @@ permalink: /about/
 
 Hi, I’m Ben, a friendly web developer for [Up&Up](https://www.upandup.agency) in Greenville, SC. In my free time I enjoy biking, hiking, gardening, exploring Greenville, learning new things, and hanging out at our awesome public library.
 
-I create fun, innovative, accessible, and fast websites. This includes [award-winning](https://www.upandup.agency/awards/upup-wins-ucda-excellence-award-university-kentucky-website) front-end development as well as building out custom Drupal and Wordpress backends with an eye towards usability.
+I create fun, innovative, accessible, and fast websites. I try to leave every bit I code I touch more readable, performant and accessible than I found it.
+
+These are the accomplishments I'm most proud of:
+
+ - Spearheaded the agency use of pattern libraries and wrote about it for [CSS-Tricks](https://css-tricks.com/build-style-guide-straight-sass/).
+ - Developed an internal [CSS style guide](/front-end/css-standards) for standardizing our approach to CSS/Sass for across all projects.
+ - Led the agency adoption of SVG and automated build tools.
+ - Learned Drupal 7 on the fly, developed an [award-winning Drupal 7 site for the University of Kentucky](https://www.upandup.agency/awards/upup-wins-ucda-excellence-award-university-kentucky-website) and became lead Drupal developer.
+ - Led the team in documenting front-end and server configuration best practices to streamline current development and help onboard new developers.
+
 
 <hr>
 
@@ -15,15 +24,22 @@ I create fun, innovative, accessible, and fast websites. This includes [award-wi
 ### Up&Up Agency
 **Front End Developer** \| February 2015 - Present
 
-Key Responsibilities:
+**Key Responsibilities:**
 
  - Transform static design comps into fast, accessible, interactive, maintainable HTML/CSS/Javascript
-
  - Develop efficient, user-friendly backend content management systems
-
  - Integrate front-end development products with content management systems.
 
-Technologies Used:
+
+**Accomplishments:**
+
+ - Developed documentation templates currently in use in all agency projects.
+ - Streamlined build tool setup with Webpack, npm scripts and Grunt.
+ - Led the agency adoption of SVG and automated build tools.
+
+
+
+**Technologies Used:**
 
 <div class="grid">
     <div class="grid__item">
