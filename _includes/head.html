@@ -14,7 +14,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:800,900|Libre+Baskerville" />
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <script type="text/javascript" async="" src="{{ "/assets/js/main.js" | relative_url }}"></script>
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+  {% if page.canonical %}
+  <link rel="canonical" href="{{ page.canonical }}">
+  {% else %}
+  <link rel="canonical" href="{{| page.url | replace:'index.html','' | absolute_url }}">
+  {% endif %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
   <link rel="webmention" href="https://webmention.io/benjamingrobertson.com/webmention" />
