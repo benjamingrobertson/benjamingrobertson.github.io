@@ -3,7 +3,7 @@ layout: post
 title:  "Understanding Layout for Screen Readers"
 date:   2017-09-06 01:00:00 -0500
 categories: accessibility
-snippet: "text"
+snippet: "If your layout is *only* visible, some users may find your content unintelligible."
 canonical: https://www.upandup.agency/accessibility/understanding-layout-screen-readers
 ---
 
