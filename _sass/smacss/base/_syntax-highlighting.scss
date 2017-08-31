@@ -11,26 +11,26 @@ $hl-green: rgb(160,193,129);
 $hl-blue: rgb(111, 171, 229);
 $hl-red: rgb(211, 115, 119);
 
-.highlighter-rouge {
-    background-color: $editor-gray;
-    color: #fff;
-    padding: .5em;
-}
+// .highlighter-rouge {
+//     background-color: $editor-gray;
+//     color: #fff;
+//     padding: .5em;
+// }
 
 
 
 .highlight {
-  background: $editor-gray;
+  // background: $editor-gray;
   color: #fff;
   font-size: .85em;
   overflow-x: scroll;
   margin: 0;
-  padding: .5em;
+  // padding: .5em;
   margin-bottom: 2em;
 
-  .highlighter-rouge & {
-    margin: .5em;
-  }
+  // .highlighter-rouge & {
+  //   margin: .5em;
+  // }
 
   .c     { color: rgb(93,99,111); font-style: italic } // Comment
   .err   { color: $hl-red; } // Error
