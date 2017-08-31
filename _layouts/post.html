@@ -15,6 +15,13 @@ comments: true
           • <a href="{{page.link}}" class="u-url">Permalink</a>
       </p>
     {{ content }}
+    {% if page.canonical %}
+    <p class="post-canonical">The post <b>{{ page.title | escape }}</b> originally appeared on
+        <a class="post-canonical__url" href="{{ page.canonical }}">
+            {{ page.canonical | replace:'https:',' ' | replace:'http:',' ' | replace:'/',' ' | truncatewords: 1, '' }}
+        </a>.
+    </p>
+    {% endif %}
   </div>
 
   <hr />
