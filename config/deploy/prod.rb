@@ -11,7 +11,7 @@
 # This will set the name of the project directory and become the subdomain
 set :project, 'benjamingrobertson.github.io' # the GitHub project name
 set :github_user, "benjamingrobertson" # Your GitHub username
-set :domain_name, "benjamingrobertson.com" # should be something like project.mydomain.com
+set :domain_name, "benrobertson.io" # should be something like project.mydomain.com
 set :user, 'deploy' # VPS hosting ssh username
 set :domain, 'dev.benjamingrobertson.com' # IP or domain name to ssh to
 
@@ -50,7 +50,7 @@ namespace :deploy do
   end
 end
 
-after "deploy:symlink:release"
+after "deploy:symlink:release", "deploy:update_jekyll"
 
 # Optional tasks ##########################################################################################
 # for use with shared files (e.g. config files)
