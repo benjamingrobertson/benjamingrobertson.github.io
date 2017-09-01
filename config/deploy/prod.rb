@@ -22,7 +22,7 @@ default_run_options[:pty] = true
 set :repository, "git@github.com:#{github_user}/#{project}.git" #GitHub clone URL
 set :scm, "git"
 set :scm_passphrase, "" # This is the passphrase for the ssh key on the server deployed to
-set :branch, "capify" # This is for a git branch if you want to deploy from something besides master
+set :branch, "master" # This is for a git branch if you want to deploy from something besides master
 set :scm_verbose, true
 set :applicationdir, "/var/www/html/#{domain_name}/"
 set :keep_releases, 3
