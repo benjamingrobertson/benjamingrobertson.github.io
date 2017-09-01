@@ -37,10 +37,19 @@ role :app, domain
 role :web, domain
 role :db, domain, :primary => true
 
+set :format, :pretty
 namespace :deploy do
   desc "Restarting mod_rails with restart.txt"
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "touch #{current_path}/tmp/restart.txt"
+  end
+
+  task :update_jekyll do
+    on roles(:app) do
+      within "#{deploy_to}/current" do
+      	execute :jekyll, "build"
+      end
+    end
   end
 
   [:start, :stop].each do |t|
