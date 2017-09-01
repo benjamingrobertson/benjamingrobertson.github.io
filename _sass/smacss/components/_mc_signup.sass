@@ -1,0 +1,48 @@
+.mc-signup
+    h2
+        color: $brand-highlight
+
+.mc-signup__form-group
+
+    +bp(medium)
+        display: flex
+        align-items: flex-end
+
+    input[type="submit"]
+        background: $brand-highlight
+        color: $white
+        border: 1px solid $brand-highlight
+        font-size: 1em
+        text-transform: uppercase
+        padding: .5em 1em
+        font-weight: bold
+        cursor: pointer
+
+        transition: 200ms background, 200ms color
+
+        &:hover
+            background: $white
+            color: $brand-highlight
+
+
+.mc-field-group
+    margin-bottom: 1em
+
+    +bp(medium)
+        margin-bottom: 0
+
+    label
+        display: block
+        font-size: .75em
+        margin-bottom: .5em
+        color: #222
+
+    input
+        padding: .5em .25em
+        margin-right: .5em
+        border: 1px solid #ccc
+        background: #fff
+        font-size: 1em
+
+        &:focus
+            outline: 2px solid $brand-highlight
