@@ -44,21 +44,13 @@ namespace :deploy do
     run "touch #{current_path}/tmp/restart.txt"
   end
 
-  task :update_jekyll do
-    on roles(:app) do
-      within "#{deploy_to}/current" do
-      	execute :jekyll, "build"
-      end
-    end
-  end
-
   [:start, :stop].each do |t|
     desc "#{t} task is a no-op with mod_rails"
     task t, :roles => :app do ; end
   end
 end
 
-after "deploy:symlink:release", "deploy:update_jekyll"
+after "deploy:symlink:release"
 
 # Optional tasks ##########################################################################################
 # for use with shared files (e.g. config files)
