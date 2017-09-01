@@ -29,6 +29,10 @@ permalink: /:categories/:title
 
 google_analytics: UA-43172667-3
 
+keep_files: [
+  '.well-known/acme-challenge'
+]
+
 
 collections:
   work:
