@@ -16,13 +16,21 @@
     font-size: 1.9rem
     +font-display
     font-weight: 900
+    margin-bottom: .5em
+
+    +bp(small)
+        margin-bottom: 0
 
 
 .header__nav
-    display: flex
-    align-items: center
-    justify-content: space-between
+    text-align: center
+
+    +bp(small)
+        display: flex
+        align-items: center
+        justify-content: space-between
 
 
 .page-link
     margin: 0 .5em
+    +font-display

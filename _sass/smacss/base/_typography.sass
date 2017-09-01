@@ -9,7 +9,10 @@ html
     +font-primary
     background-color: $white
     color: $black
-    font-size: 18px
+    font-size: 16px
+
+    +bp(medium)
+        font-size: 18px
 
 
 h1,
@@ -60,7 +63,7 @@ a:visited
 
 
 %defaultLink
-    +link($highlight-blue)
+    +link($brand-highlight)
 
     &:hover
         background-color: #ffd897
@@ -112,3 +115,16 @@ blockquote
 
 .icon--rss
     fill: #828282
+
+
+
+hr
+    border: 0
+    height: 5px
+    width: 10%
+    max-width: 50px
+    margin-top: 0
+    text-align: left
+    margin-left: 0
+    margin-bottom: 1rem
+    background-color: $black

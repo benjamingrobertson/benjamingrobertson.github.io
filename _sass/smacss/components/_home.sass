@@ -7,7 +7,10 @@ main.home
 
 
 .home__header h1
-    font-size: 4rem
+    font-size: 2em
+
+    +bp(large)
+        font-size: 4rem
 
 .home__header
     font-size: 1.4em
@@ -85,18 +88,6 @@ article
 
     a
         @extend %defaultLink
-
-
-hr
-    border: 0
-    height: 5px
-    width: 10%
-    max-width: 50px
-    margin-top: 0
-    text-align: left
-    margin-left: 0
-    margin-bottom: 1rem
-    background-color: $black
 
 
 .home
