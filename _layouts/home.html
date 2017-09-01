@@ -1,77 +1,76 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en-US " }}">
 
-    {% include head.html %}
+{% include head.html %}
 
-    <body>
-        <header class="home__header">
-            <div class="h-card">
-                <h1><a href="http://benjamingrobertson.com" rel="me" class="p-name u-url">Ben Robertson</a></h1>
-                <img class="u-photo" src="http://benjamingrobertson.com/assets/img/ben.jpg" height="175" width="175" alt="headshot of Ben Robertson">
-                <p class="p-note">Web developer 💻. Gardener 🌱. Bicycler 🚴🏼. Blues Brother 🕶.</p>
-                <div class="profiles">
-                    <a class="no-decoration u-url" href="https://twitter.com/banquos_ghost" rel="me">
-                        <span class="icon icon--twitter">{% include icon-twitter.svg %}</span>
-                        <span class="username">@banquos_ghost</span>
-                    </a>
-                    &middot;
-                    <a class="no-decoration u-url" href="https://github.com/benjamingrobertson" rel="me">
-                        <span class="icon icon--github">{% include icon-github.svg %}</span>
-                        <span class="username">benjamingrobertson</span>
-                    </a>
-                    &middot;
-                    <a class="no-decoration u-url" href="{{ base.url }}/feed.xml" rel="me">
-                        <span class="icon icon--rss">{% include icon-rss.svg %}</span>
-                        <span class="username">rss</span>
-                    </a>
-                </div>
+<body>
+    <header class="home__header">
+        <div class="h-card">
+            <h1><a href="{{site.url}}" rel="me" class="p-name u-url">Ben Robertson</a></h1>
+            <img class="u-photo" src="http://benjamingrobertson.com/assets/img/ben.jpg" height="175" width="175" alt="headshot of Ben Robertson">
+            <p class="p-note">Web developer 💻. Gardener 🌱. Bicycler 🚴🏼. Blues Brother 🕶.</p>
+            <div class="profiles">
+                <a class="no-decoration u-url" href="https://twitter.com/banquos_ghost" rel="me">
+                    <span class="icon icon--twitter">{% include icon-twitter.svg %}</span>
+                    <span class="username">@banquos_ghost</span>
+                </a>
+                &middot;
+                <a class="no-decoration u-url" href="https://github.com/benjamingrobertson" rel="me">
+                    <span class="icon icon--github">{% include icon-github.svg %}</span>
+                    <span class="username">benjamingrobertson</span>
+                </a>
+                &middot;
+                <a class="no-decoration u-url" href="{{ base.url }}/feed.xml" rel="me">
+                    <span class="icon icon--rss">{% include icon-rss.svg %}</span>
+                    <span class="username">rss</span>
+                </a>
             </div>
+        </div>
 
-        </header>
-        <main class="home">
-            <section class="grid-item about">
-                <header class="section-header">
-                    <h2>About Me</h2>
-                    <hr>
-                </header>
-                <p>Hi, I’m Ben, a friendly web developer for Up&amp;Up in Greenville, SC. In my free time I enjoy biking, hiking, gardening, exploring Greenville, learning new things, and hanging out at our awesome public library.</p>
+    </header>
+    <main class="home">
+        <section class="grid-item about">
+            <header class="section-header">
+                <h2>About Me</h2>
+                <hr>
+            </header>
+            <p>Hi, I’m Ben, a friendly web developer for Up&amp;Up in Greenville, SC. In my free time I enjoy biking, hiking, gardening, exploring Greenville, learning new things, and hanging out at our awesome public library.</p>
 
-                <p>I create fun, innovative, accessible, and fast websites. This includes award-winning front-end development as well as building out custom Drupal and Wordpress backends with an eye towards usability.</p>
-                <hr />
-                <a href="/about">More About Me →</a>
-            </section>
-            <section class="grid-item micro-blog">
-                <header class="section-header">
-                    <h2>Updates</h2>
-                    <hr>
+            <p>I create fun, innovative, accessible, and fast websites. This includes award-winning front-end development as well as building out custom Drupal and Wordpress backends with an eye towards usability.</p>
+            <hr />
+            <a href="/about">More About Me →</a>
+        </section>
+        <section class="grid-item micro-blog">
+            <header class="section-header">
+                <h2>Updates</h2>
+                <hr>
+            </header>
+            {% assign updates = site.updates | reverse %} {% for update in updates limit: 5 %}
+            <article class="snippet">
+                {{update.content}}
+                <date> - {{ update.date | date: "%b %-d, %Y" }}</date>
+            </article>
+            {% endfor %}
+        </section>
+        <section class="grid-item blog">
+            <header class="section-header">
+                <h2>Blog</h2>
+                <hr>
+            </header>
+            {% for post in site.posts limit: 5 %}
+            <article class="home__article">
+                <header>
+                    <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+                    <date> - {{ post.date | date: "%b %-d, %Y" }}</date>
                 </header>
-                {% assign updates = site.updates | reverse %}
-                {% for update in updates limit: 5 %}
-                        <article class="snippet">
-                            {{update.content}}
-                            <date> - {{ update.date | date: "%b %-d, %Y" }}</date>
-                        </article>
-                {% endfor %}
-            </section>
-            <section class="grid-item blog">
-                <header class="section-header">
-                    <h2>Blog</h2>
-                    <hr>
-                </header>
-                {% for post in site.posts limit: 5 %}
-                    <article class="home__article">
-                        <header>
-                            <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-                            <date> - {{ post.date | date: "%b %-d, %Y" }}</date>
-                        </header>
-                        <p>{{post.snippet}}</p>
-                        <a href="{{ post.url | relative_url }}">Read More</a>
-                    </article>
-                {% endfor %}
-                <hr />
-                <a href="/blog">More Blog Posts →</a>
-            </section>
-            <!-- Coming soon 👀
+                <p>{{post.snippet}}</p>
+                <a href="{{ post.url | relative_url }}">Read More</a>
+            </article>
+            {% endfor %}
+            <hr />
+            <a href="/blog">More Blog Posts →</a>
+        </section>
+        <!-- Coming soon 👀
             <section class="grid-item work">
                 <header class="section-header">
                     <h2>Work</h2>
@@ -86,7 +85,7 @@
                     </article>
                 {% endfor %}
             </section> -->
-        </main>
-    </body>
+    </main>
+</body>
 
 </html>
