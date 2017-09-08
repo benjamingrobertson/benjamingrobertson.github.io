@@ -33,6 +33,8 @@ google_analytics: UA-43172667-3
 #   '.well-known/acme-challenge'
 # ]
 
+production: false
+
 
 collections:
   work:

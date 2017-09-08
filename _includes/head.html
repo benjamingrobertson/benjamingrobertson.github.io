@@ -24,8 +24,8 @@
 
   <link rel="webmention" href="https://webmention.io/benjamingrobertson.com/webmention" />
   <link rel="webmention" href="https://webmention.io/benjamingrobertson.com/webmention" />
-  <!-- Environment: {{jekyll.environment}} -->
-  {% if jekyll.environment == 'production' and site.google_analytics %}
+  <!-- Environment: {{site.production}} -->
+  {% if site.production and site.google_analytics %}
   {% include google-analytics.html %}
   {% endif %}
 </head>

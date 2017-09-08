@@ -55,6 +55,7 @@ after "deploy:symlink:release", "deploy:update_jekyll"
 # Optional tasks ##########################################################################################
 # for use with shared files (e.g. config files)
 after "deploy:update_code" do
-    run "cd #{release_path} && JEKYLL_ENV=production && bundle exec jekyll build"
+    run "JEKYLL_ENV=production"
+    run "cd #{release_path} && bundle exec jekyll build --config=_config_prod.yml"
 end
 after "deploy", "deploy:cleanup"
