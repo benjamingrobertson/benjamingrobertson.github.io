@@ -4,7 +4,9 @@
 {% include head.html %}
 
 <body>
-    <header class="home__header">
+    {% include header.html %}
+
+    <header class="home__header l-contain l-contain--center">
         <div class="h-card">
             <h1><a href="{{ site.url }}" rel="me" class="p-name u-url">Ben Robertson</a></h1>
             <img class="u-photo" src="{{ site.url }}/assets/img/ben.jpg" height="175" width="175" alt="headshot of Ben Robertson">
@@ -28,7 +30,7 @@
         </div>
 
     </header>
-    <main class="home">
+    <main class="home l-contain l-contain--center">
         <section class="grid-item about">
             <header class="section-header">
                 <h2>About Me</h2>

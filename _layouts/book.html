@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    <main class="" aria-label="Content">
+            <div class="l-contain l-contain--center">
+                <article class="" id="">
+                    <section class="article-content">
+                        <h1 class="article-h1 text-center">{{page.headline}}</h1>
+                        <div class="article-body layout-book">
+                            <div class="">
+                                 <div class="book">
+                                    <div class="book__text">
+                                        <span class="book__title">Accessible Web Design</span>
+                                        <span class="book__author">by Ben Robertson</span>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="">
+                                <div class="lede">
+                                    {{page.content}}
+                                </div>
+                                <div class="mc-signup__form">
+                                    {% include signup.html %}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </div><!-- /content-wrapper -->
+
+            <div class="l-contain--small">
+            </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

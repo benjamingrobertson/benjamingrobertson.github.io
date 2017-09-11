@@ -1,15 +1,24 @@
-<header class="site-header" role="banner">
-    <div class="layout-container header__nav">
-        <a href="/" class="brand-logo no-decoration h-card p-author" rel="author">Ben Robertson</a>
+<header class="site-header">
+    <div class="site-header__wrap">
+        <div class="site-id" role="banner">
+            <a class="site-id__link" href="{{site.url}}" rel="home">
+            <div class="site-id__logo">
+                <img class="logo" src="/assets/img/ben.jpg" alt="Ben Robertson"/>
+            </div>
+            <div class="site-id__name">
+                <span class="site-id__name-part">Ben</span>
+                <span class="site-id__name-part">Robertson</span>
+            </div>
+            </a>
+        </div>
 
-        <nav>
-            <a class="page-link no-decoration" href="/about">about</a>
-            <a class="page-link no-decoration" href="/blog">blog</a>
-            <a class="page-link no-decoration" href="/feed.xml">rss</a>
-            <!-- <div class="trigger">
-                {% for my_page in site.pages %} {% if my_page.title %}
-                <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a> {% endif %} {% endfor %}
-            </div> -->
-        </nav>
-    </div>
+        <nav id="nav-main" class="nav-main" role="navigation">
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/feed.xml">RSS</a></li>
+                <li><a href="/accessible-web-design">Book</a></li>
+            </ul>
+        </nav><!-- #nav -->
+        </div>
 </header>

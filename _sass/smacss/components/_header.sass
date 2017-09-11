@@ -1,37 +1,66 @@
-.site-header
-    position: absolute
-    width: 100%
-    top: 0
-    left: 0
-    padding: 1em 0
-    background-color: $white
-    z-index: 1
-    box-shadow: -2px 1px 2px 1px rgba(0, 0, 0, 0.1)
+.site-header__wrap
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    align-items: center
+
+    width: 90%
+    max-width: 60rem
+    margin: 0 auto
+
+    @media (min-width: 35em)
+        flex-direction: row
 
 
-.brand-logo
-    text-decoration: none
-    text-transform: lowercase
-    color: $black
-    display: inline-block
-    font-size: 1.9rem
-    +font-display
-    font-weight: 900
-    margin-bottom: .5em
 
-    +bp(small)
-        margin-bottom: 0
+.nav-main
 
 
-.header__nav
-    text-align: center
-
-    +bp(small)
+    ul
         display: flex
+        list-style-type: none
+        padding-left: 0
+
+    li
+        margin-right: 1em
+
+
+
+.site-id
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    &__link
+        display: flex
+        justify-content: flex-start
         align-items: center
-        justify-content: space-between
+        text-decoration: none
+        // text-transform: lowercase
+        padding: .5em
+        background: none
+
+    &__logo
+        height: 5rem
+        width: 5rem
+
+        margin-right: 1em
+
+        background-color: $brand-primary
+        border-radius: 50%
+        overflow: hidden
+
+        .logo
+            height: auto
+            max-width: 100%
 
 
-.page-link
-    margin: 0 .5em
-    +font-display
+    &__name
+        font-size: 1.5em
+
+
+    &__name-part
+        display: block
+        transform: rotate(-3deg) translateY(-2px)
+        line-height: 1
+        font-weight: bold
