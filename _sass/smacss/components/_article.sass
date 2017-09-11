@@ -6,37 +6,34 @@
 // .post-title
 //     font-size: 2.25em
 //
-// .heading__anchor-link
-//     opacity: 0
-//     display: inline-block
-//     font-size: .5em
-//     margin-left: 1em
-//     vertical-align: middle
-//     transition: opacity .2s, transform .2s
-//     transform: translateY(100%)
-//
-// .post-content h2:hover,
-// .post-content h3:hover
-//
-//     .heading__anchor-link
-//         opacity: 1
-//         transform: translateY(0)
-//
-// .post-content
-//     p
-//         font-size: 1rem
-//
-//     img
-//         max-width: 100%
-//         height: auto
-//         display: block
-//         box-shadow: -2px 1px 10px rgba($black, .1)
-//
-//     // captions
-//     img + em
-//         margin-top: .25em
-//         font-size: .85rem
-//         color: rgba($black, .8)
+.heading__anchor-link
+    opacity: 0
+    display: inline-block
+    font-size: .5em
+    margin-left: 1em
+    vertical-align: middle
+    transition: opacity .2s, transform .2s
+    transform: translateY(100%)
+
+.post-content h2:hover,
+.post-content h3:hover
+
+    .heading__anchor-link
+        opacity: 1
+        transform: translateY(0)
+
+.post-content
+    img
+        max-width: 100%
+        height: auto
+        display: block
+        box-shadow: -2px 1px 10px rgba($black, .1)
+
+    // captions
+    img + em
+        margin-top: .25em
+        font-size: .85rem
+        color: rgba($black, .8)
 //
 //
 //     a
@@ -53,14 +50,14 @@
 //         margin-bottom: 1.5em
 //
 //
-// .post-canonical
-//     font-style: italic
-//
-//     &::before
-//         content: '. . .'
-//         display: block
-//         margin: 1em 0 2em
-//         text-align: center
+.post-canonical
+    font-style: italic
+
+    &::before
+        content: '. . .'
+        display: block
+        margin: 1em 0 2em
+        text-align: center
 
 
 .article-body > :first-child,
