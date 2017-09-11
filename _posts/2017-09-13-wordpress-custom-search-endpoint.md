@@ -1,5 +1,6 @@
 ---
 layout: post
+author: Ben Robertson
 title:  "Creating a Custom Search Endpoint with the Wordpress API"
 date:   2017-09-13 08:00:00 -0500
 categories: wordpress

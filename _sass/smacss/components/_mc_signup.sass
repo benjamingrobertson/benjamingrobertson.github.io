@@ -1,39 +1,104 @@
+// .mc-signup
+//     h2
+//         color: $brand-highlight
+//
+// .mc-signup__form-group
+//
+//     +bp(medium)
+//         display: flex
+//         align-items: flex-end
+//
+//     input[type="email"]
+//         min-width: 250px
+//
+//     input[type="submit"]
+//         background: $brand-highlight
+//         color: $white
+//         border: 1px solid $brand-highlight
+//         font-size: 1em
+//         text-transform: uppercase
+//         padding: .5em 1em
+//         font-weight: bold
+//         cursor: pointer
+//
+//         transition: 300ms background, 300ms color, 300ms border-color
+//
+//         &:hover
+//             background: $black
+//             color: $white
+//             border-color: $black
+//
+//
+// .mc-field-group
+//     margin-bottom: 1em
+//
+//     +bp(medium)
+//         margin-bottom: 0
+//
+//     label
+//         display: block
+//         font-size: .75em
+//         margin-bottom: .5em
+//         color: #222
+//
+//     input
+//         padding: .5em .25em
+//         margin-right: .5em
+//         border: 1px solid #ccc
+//         background: #fff
+//         font-size: 1em
+//
+//         &:focus
+//             outline: 2px solid $brand-highlight
+
+
+
 .mc-signup
+    margin: 3em 0
+
     h2
-        color: $brand-highlight
+        margin-top: 0
+
+
+@keyframes shake
+    25%
+        transform: rotate(1deg) translateX(-1em) translateY(.5em)
+
+    50%
+        transform: rotate(-1deg) translateX(-1em) translateY(.5em)
+
+    75%
+        transform: rotate(1deg) translateX(-1em) translateY(.5em)
+
+    100%
+        transform: rotate(-2deg) translateX(-1em) translateY(.5em)
+
+
+.callout
+    background-color: #eee
+    max-width: 40rem
+    padding-left: 5%
+
+    border-top: 5px solid $green
+    border-bottom: 5px solid $green
+    padding-top: 3em
+    padding-bottom: 3.5em
+
+    transform: rotate(-1deg) translateX(-1em) translateY(.5em)
+
+    &.shake
+        animation: shake 400ms 1
+
+    @media (min-width: 60rem)
+        padding-left: calc((100% - 60rem) / 2)
+
+
+
 
 .mc-signup__form-group
-
-    +bp(medium)
+    @media (min-width: 35em)
         display: flex
         align-items: flex-end
-
-    input[type="email"]
-        min-width: 250px
-
-    input[type="submit"]
-        background: $brand-highlight
-        color: $white
-        border: 1px solid $brand-highlight
-        font-size: 1em
-        text-transform: uppercase
-        padding: .5em 1em
-        font-weight: bold
-        cursor: pointer
-
-        transition: 300ms background, 300ms color, 300ms border-color
-
-        &:hover
-            background: $black
-            color: $white
-            border-color: $black
-
-
-.mc-field-group
-    margin-bottom: 1em
-
-    +bp(medium)
-        margin-bottom: 0
 
     label
         display: block
@@ -49,4 +114,31 @@
         font-size: 1em
 
         &:focus
-            outline: 2px solid $brand-highlight
+            outline: 2px solid $brand-primary
+
+    input[type="email"]
+        min-width: 250px
+
+
+    input[type="submit"]
+        background: $brand-primary
+        color: #fff
+        border: 1px solid $brand-primary
+        font-size: 1em
+        text-transform: uppercase
+        padding: .5em 1em
+        font-weight: bold
+        cursor: pointer
+
+        transition: 300ms background, 300ms color, 300ms border-color
+
+        &:hover
+            background: $green
+            color: #fff
+            border-color: $green
+
+
+.mc-field-group
+    margin-bottom: 1em
+    @media (min-width: 35em)
+        margin-bottom: 0
