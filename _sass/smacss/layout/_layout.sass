@@ -1,11 +1,56 @@
-body
-    width: 90%
-    margin: 8em auto 0
+// body
+//     width: 90%
+//     margin: 8em auto 0
+//
+//
+// .layout-container
+//     width: 90%
+//     margin: 0 auto
+//
+// .site-footer
+//     padding: 60px 0
 
 
 .layout-container
+    max-width: 40rem
+
+
+.l-contain
     width: 90%
+    max-width: 55rem
+
+
+.l-contain--small
+    width: 90%
+    max-width: 34rem
+
+.l-contain--center
     margin: 0 auto
 
-.site-footer
-    padding: 60px 0
+
+html,
+body
+    margin: 0
+    padding: 0
+
+body
+    border-top: 5px solid $brand-primary
+    border-bottom: 5px solid $brand-primary
+    padding-top: 5em
+
+
+#content
+    min-height: 80vh
+
+
+.text-center
+    text-align: center
+
+
+.layout-book
+
+    @media (min-width: 768px)
+        display: grid
+        grid-template-columns: 1fr 2fr
+        grid-gap: 2em
+        margin-bottom: 4em

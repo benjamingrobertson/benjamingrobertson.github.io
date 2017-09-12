@@ -1,5 +1,6 @@
 ---
 layout: post
+author: Ben Robertson
 title:  "Humanizing the Web"
 date:   2017-08-01 01:00:00 -0500
 categories: web

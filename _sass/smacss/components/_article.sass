@@ -1,11 +1,11 @@
-.post
-    margin: 0
-    max-width: 37.5rem
-
-
-.post-title
-    font-size: 2.25em
-
+// .post
+//     margin: 0
+//     max-width: 37.5rem
+//
+//
+// .post-title
+//     font-size: 2.25em
+//
 .heading__anchor-link
     opacity: 0
     display: inline-block
@@ -23,9 +23,6 @@
         transform: translateY(0)
 
 .post-content
-    p
-        font-size: 1rem
-
     img
         max-width: 100%
         height: auto
@@ -37,22 +34,22 @@
         margin-top: .25em
         font-size: .85rem
         color: rgba($black, .8)
-
-
-    a
-        @extend %defaultLink
-
-    ol li,
-    ul li
-        margin-bottom: .25em
-        line-height: 1.75
-
-
-
-    ol
-        margin-bottom: 1.5em
-
-
+//
+//
+//     a
+//         // @extend %defaultLink
+//
+//     ol li,
+//     ul li
+//         margin-bottom: .25em
+//         line-height: 1.75
+//
+//
+//
+//     ol
+//         margin-bottom: 1.5em
+//
+//
 .post-canonical
     font-style: italic
 
@@ -61,3 +58,38 @@
         display: block
         margin: 1em 0 2em
         text-align: center
+
+
+.article-body > :first-child,
+.lede
+    font-size: 1.3em
+
+
+
+.article-body
+    figure,
+    img
+        max-width: 100%
+        height: auto
+        margin: 0
+
+    figure
+        margin: 2em 0 1em
+        padding-bottom: 1em
+
+        a
+            background: none
+
+        img
+            margin-bottom: .5em
+
+    .wp-caption-text
+        font-size: .8em
+        margin-left: 1em
+
+
+    blockquote
+        margin: 1em 0 1em 2em
+        background-color: #eeeeee
+        padding: 1em 2em
+        border-left: 10px solid $brand-primary

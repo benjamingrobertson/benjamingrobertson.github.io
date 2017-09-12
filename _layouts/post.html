@@ -2,28 +2,38 @@
 layout: default
 comments: true
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="l-contain--center l-contain">
+    <article class="post h-entry l-contain--small" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-  </header>
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+      </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-      <p class="post-meta">
-          <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-          {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
-          • <a href="{{page.link}}" class="u-url">Permalink</a>
-      </p>
-    {{ content }}
-    {% if page.canonical %}
-    <p class="post-canonical">The post <b>{{ page.title | escape }}</b> originally appeared on
-        <a class="post-canonical__url" href="{{ page.canonical }}">
-            {{ page.canonical | replace:'https:',' ' | replace:'http:',' ' | replace:'/',' ' | truncatewords: 1, '' }}
-        </a>.
-    </p>
-    {% endif %}
-  </div>
+      <div class="post-content e-content" itemprop="articleBody">
+          <p class="post-meta">
+              <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+              {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+              • <a href="{{page.link}}" class="u-url">Permalink</a>
+          </p>
+        {{ content }}
+        {% if page.canonical %}
+        <p class="post-canonical">The post <b>{{ page.title | escape }}</b> originally appeared on
+            <a class="post-canonical__url" href="{{ page.canonical }}">
+                {{ page.canonical | replace:'https:',' ' | replace:'http:',' ' | replace:'/',' ' | truncatewords: 1, '' }}
+            </a>.
+        </p>
+        <br>
+        {% endif %}
 
-  <hr />
-  {% include signup.html %}
-</article>
+        <br>
+        <p><em>Have any comments or questions about this post? Send them to me via email <a href="mailto:hi@benrobertson.io">hi@benrobertson.io</a> or on Twitter <a href="https://twitter.com/Banquos_Ghost">@banquos_ghost</a>.</em></p>
+      </div>
+
+    </article>
+</div>
+
+{% if page.categories contains "accessibility" %}
+    {% include signup-awd.html %}
+{% else %}
+    {% include signup.html %}
+{% endif %}

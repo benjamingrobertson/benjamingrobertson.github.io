@@ -1,5 +1,6 @@
 ---
 layout: post
+author: Ben Robertson
 title:  "Allow Audio in Wordpress Excerpt"
 date:   2017-03-17 00:00:00 -0500
 categories: wordpress

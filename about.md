@@ -40,32 +40,21 @@ These are the accomplishments I'm most proud of:
 
 
 **Technologies Used:**
-
-<div class="grid">
-    <div class="grid__item">
-        <ul>
-            <li>HTML</li>
-            <li>Sass</li>
-            <li>CSS</li>
-            <li>SVG</li>
-            <li>Javascript</li>
-            <li>React.js</li>
-            <li>Grunt</li>
-            <li>Webpack</li>
-        </ul>
-    </div>
-    <div class="grid__item">
-        <ul>
-            <li>Wordpress</li>
-            <li>jQuery</li>
-            <li>Drupal</li>
-            <li>PHP</li>
-            <li>CakePHP</li>
-            <li>Python</li>
-            <li>Django</li>
-        </ul>
-    </div>
-</div>
+ - HTML5
+ - Sass
+ - CSS
+ - SVG
+ - Javascript
+ - React.js
+ - Grunt
+ - Webpack
+ - Drupal
+ - PHP
+ - jQuery
+ - Wordpress
+ - CakePHP
+ - Python
+ - Django
 
 ### Freelance
 **Wordpress / Frontend Developer** \| October 2014 - Present
@@ -82,17 +71,21 @@ These are the accomplishments I'm most proud of:
 
 ## Side Projects / Volunteering
 
-### Second Nature Journal
-I started and run (with the help of some friends) an online journal for critical thinking about technology and new media in light of the Christian tradition, [Second Nature](https://secondnaturejournal.com/). We've been running since 2013. I'm an editor and jack-of-all trades.
-
-### IISTC
-The IISTC ([International Institute for the Study of Technology and Christianity](https://iistc.org/)) is the non-profit we started to publish Second Nature. I'm an executive director.
-
 ### Engaged Encounter
 My lovely wife and I are presenting couples for [South Carolina Catholic Engaged Encounter](http://www.cee-sc.org/). We provide weekend-long marriage preparation retreats for engaged couples. I am also the treasurer.
+
+### Second Nature Journal
+**2013 - 2017**
+
+I started and ran (with the help of some friends) an online journal for critical thinking about technology and new media in light of the Christian tradition, [Second Nature](https://secondnaturejournal.com/).
+
+### IISTC
+**2013 - 2017**
+
+The IISTC ([International Institute for the Study of Technology and Christianity](https://iistc.org/)) is the non-profit we started to publish Second Nature. I'm was executive director.
 
 <hr>
 
 ## About this site
 
-This site is a simple, responsive [Jekyll](http://jekyllrb.com/) theme I designed and built using the Minima theme as the initial structure. My display font is [Raleway Extra-Bold](https://fonts.google.com/specimen/Raleway) and the body font is [Libre Baskerville](https://fonts.google.com/specimen/Libre+Baskerville). Fonts are served from Google Fonts. I borrowed my link styles from the [Tufte CSS](https://github.com/edwardtufte/tufte-css) project.
+This site is a simple, responsive [Jekyll](http://jekyllrb.com/) theme I designed and built using the Minima theme as the initial structure. The type is set in [Adobe Source Sans Pro](https://edgewebfonts.adobe.com/fonts#/?nameFilter=source&collection=source-sans-pro) and served via [Adobe Edge Web Fonts](https://edgewebfonts.adobe.com/index).

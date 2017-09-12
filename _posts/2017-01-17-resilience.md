@@ -1,5 +1,6 @@
 ---
 layout: post
+author: Ben Robertson
 title:  "Resilience"
 date:   2017-01-17 00:00:00 -0500
 categories: quotes

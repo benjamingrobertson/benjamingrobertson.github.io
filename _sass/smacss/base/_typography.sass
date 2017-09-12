@@ -1,19 +1,12 @@
-@mixin font-primary
-    font-family:  "Libre Baskerville", serif
-
-@mixin font-display
-    font-family: 'Raleway', sans-serif
-
-
 html
-    +font-primary
-    background-color: $white
-    color: $black
+    font-family: 'source-sans-pro', -apple-system, system-ui, SegoeUI, Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+    line-height: 1.4
     font-size: 16px
-
-    +bp(medium)
+    background-color: #fffff8
+    color: #000000
+    
+    +bp(large)
         font-size: 18px
-
 
 h1,
 h2,
@@ -21,110 +14,115 @@ h3,
 h4,
 h5,
 h6
-    +font-display
     font-weight: 800
+    margin-top: .75em
+    margin-bottom: .5em
+    color: $purple
+    line-height: 1.2
 
 h1
-    font-weight: 900
+    font-size: 3em
 
 
-p
+h2
+    font-size: 1.5em
+
+
+h3
+    font-size: 1.33em
+
+
+h4
+    font-size: 1.25em
+
+
+h5
     font-size: 1.1em
-    margin-top: 0
-    line-height: 1.75
-    margin-bottom: 1.5em
 
 
-strong
-    +font-display
+h6
+    font-size: 1em
 
 
+.content
+    max-width: 34rem
+    margin-left: 5rem
+    margin-bottom: 5rem
 
-.page-title
-    font-size: 4em
-    text-align: center
+pre,
+code
+    background-color: #eee
+    color: #111
+    border-radius: 4px
+    padding: 2px 4px
+    font-family: Menlo, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
+    font-size: .9em
+    text-align: left
+    white-space: pre
+    word-spacing: normal
+    word-break: normal
+    word-wrap: normal
+    line-height: 1.5
+    tab-size: 4
+    hyphens: none
 
 
-// Links: replicate underline that clears descenders
-a,
-a:visited
-    color: inherit
-
-@mixin link($color)
-    background: -webkit-linear-gradient($white, $white), -webkit-linear-gradient($white, $white), -webkit-linear-gradient($color, $color)
-    background: linear-gradient($white, $white), linear-gradient($white, $white), linear-gradient($color, $color)
-    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px
-    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px
-    background-size: 0.05em 1px, 0.05em 1px, 1px 1px
-    background-repeat: no-repeat, no-repeat, repeat-x
-    background-position: 0% 93%, 100% 93%, 0% 93%
-    color: $color
-
-
-
-%defaultLink
-    +link($brand-highlight)
-
-    &:hover
-        background-color: #ffd897
-        text-shadow: 0.03em 0 #ffd897, -0.03em 0 #ffd897, 0 0.03em #ffd897, 0 -0.03em #ffd897, 0.06em 0 #ffd897, -0.06em 0 #ffd897, 0.09em 0 #ffd897, -0.09em 0 #ffd897, 0.12em 0 #ffd897, -0.12em 0 #ffd897, 0.15em 0 #ffd897, -0.15em 0 #ffd897
+pre
+    max-width: 100%
+    overflow: scroll
+    padding: 1em
 
 
 a
+    color: $blue
+    font-weight: bold
     text-decoration: none
-    text-shadow: 0.03em 0 $white, -0.03em 0 $white, 0 0.03em $white, 0 -0.03em $white, 0.06em 0 $white, -0.06em 0 $white, 0.09em 0 $white, -0.09em 0 $white, 0.12em 0 $white, -0.12em 0 $white, 0.15em 0 $white, -0.15em 0 $white
-    +link($black)
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, $brand-primary 50%)
+    background-size: 100% 200%
+    background-position-y: 10%
 
-a:selection
-    text-shadow: 0.03em 0 #ffd897, -0.03em 0 #ffd897, 0 0.03em #ffd897, 0 -0.03em #ffd897, 0.06em 0 #ffd897, -0.06em 0 #ffd897, 0.09em 0 #ffd897, -0.09em 0 #ffd897, 0.12em 0 #ffd897, -0.12em 0 #ffd897, 0.15em 0 #ffd897, -0.15em 0 #ffd897
-    background: #ffd897
+    transition: 200ms background-position-y
+
+    &:visited
+        color: $blue
+
+    &:hover,
+    &:focus
+        background-position-y: 20%
 
 
-a:-moz-selection
-    text-shadow: 0.03em 0 #ffd897, -0.03em 0 #ffd897, 0 0.03em #ffd897, 0 -0.03em #ffd897, 0.06em 0 #ffd897, -0.06em 0 #ffd897, 0.09em 0 #ffd897, -0.09em 0 #ffd897, 0.12em 0 #ffd897, -0.12em 0 #ffd897, 0.15em 0 #ffd897, -0.15em 0 #ffd897
-    background: #ffd897
+
+textarea
+    max-width: 100%
 
 
-.no-decoration,
-a.no-decoration
+
+
+
+.skip-link
+    clip: rect(1px, 1px, 1px, 1px)
+    position: absolute !important
+    height: 1px
+    width: 1px
+    overflow: hidden
+    // Many screen reader and browser combinations announce broken words as they would appear visually.
+    word-wrap: normal !important
+
+// Display the link on focus.
+.skip-link:focus
+    background-color: $brand-primary
+    background-image: none
+    border-radius: 3px
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6)
+    clip: auto !important
+    color: #fff
+    display: block
+    font-weight: bold
+    height: auto
+    left: 3em
+    line-height: normal
+    padding: 15px 23px 14px
     text-decoration: none
-    background: 0 !important
-    text-shadow: initial
-
-
-@media screen and (-webkit-min-device-pixel-ratio: 0)
-    a
-        background-position-y: 87%, 87%, 87%
-
-
-blockquote
-    border-left: .5rem solid gray
-    background: #e5e5e5
-    padding: 2rem 2rem 2rem 2rem
-    font-size: .75rem
-    margin: 2em 1em
-
-    p:last-of-type
-        margin-bottom: 0
-
-    a
-        text-shadow: 0.03em 0 #e5e5e5, -0.03em 0 #e5e5e5, 0 0.03em #e5e5e5, 0 -0.03em #e5e5e5, 0.06em 0 #e5e5e5, -0.06em 0 #e5e5e5, 0.09em 0 #e5e5e5, -0.09em 0 #e5e5e5, 0.12em 0 #e5e5e5, -0.12em 0 #e5e5e5, 0.15em 0 #e5e5e5, -0.15em 0 #e5e5e5
-        // text-shaodw: none
-
-
-
-.icon--rss
-    fill: #828282
-
-
-
-hr
-    border: 0
-    height: 5px
-    width: 10%
-    max-width: 50px
-    margin-top: 0
-    text-align: left
-    margin-left: 0
-    margin-bottom: 1rem
-    background-color: $black
+    top: 3em
+    width: auto
+    z-index: 100000

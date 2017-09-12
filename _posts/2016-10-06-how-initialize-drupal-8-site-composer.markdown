@@ -1,5 +1,6 @@
 ---
 layout: post
+author: Ben Robertson
 title:  "How to Initialize a Drupal 8 Site with Composer"
 date:   2016-10-06 00:00:00 -0500
 categories: drupal

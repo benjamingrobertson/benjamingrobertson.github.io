@@ -1,5 +1,6 @@
 ---
 layout: post
+author: Ben Robertson
 title:  "Getting Comfortable with \"Design\""
 date:   2017-06-08 00:00:00 -0500
 categories: front-end

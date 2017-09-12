@@ -1,5 +1,6 @@
 ---
 layout: post
+author: Ben Robertson
 title:  "A Legend of Zelda Lorem Ipsum Generator"
 date:   2017-04-26 00:00:00 -0500
 categories: work

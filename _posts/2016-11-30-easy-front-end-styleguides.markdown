@@ -1,5 +1,6 @@
 ---
 layout: post
+author: Ben Robertson
 title:  "How to Make a Front End Style Guide, the Easy Way"
 date:   2016-11-30 00:00:00 -0500
 categories: front-end
