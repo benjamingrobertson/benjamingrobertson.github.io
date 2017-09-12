@@ -9,7 +9,7 @@ permalink: /accessible-web-design/
 <p class="mar-b">Does reading the WCAG 2.0 Guidelines put you to sleep?</p>
 <p>Have you ever felt like you were sacrificing good design to make a site accessible?</p>
 <p>Have you ever thought “man, web accessibility is the most <strong>inaccessible</strong> web development topic”?</p>
-<p class="mar-b"><em>“Accessibility Made Simple”</em> is a short book I’m writing that will help you:</p>
+<p class="mar-b"><em>Accessible Web Design</em> is a short book I’m writing that will help you:</p>
 <ul>
 <li>Develop a repertoire of accessible interactive components you can use on any project</li>
 <li>Build projects that screen-reader users can use and&nbsp;<strong>enjoy</strong></li>
