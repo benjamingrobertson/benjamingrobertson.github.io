@@ -10,5 +10,6 @@ This is my personal site. I based it on the default Jekyll Minima theme, with so
  - [ ] Replace the disqus comments on blog posts with webmentions.
  - [x] Add RSS link somewhere
  - [ ] Add a separate updates RSS
- - [ ] Update code font (menlo?)
+ - [x] Update code font (menlo?)
  - [x] Add option for rel="canonical" link for blog posts that are published elsewhere.
+ - [ ] Add meta tags for twitter / social media.
