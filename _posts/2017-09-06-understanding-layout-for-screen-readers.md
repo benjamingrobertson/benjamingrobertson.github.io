@@ -20,6 +20,9 @@ I'll walk through how to make use of these indicators to make a simple web page 
 
 We’ll start with a simple page layout. Then we’ll add a skip link to help the user skip repetitive content. After that, we’ll provide more information to assistive technology by using new HTML5 elements and the role attribute. Finally, we’ll provided detailed context to assistive technology by specifying ARIA Labels and wrap up.
 
+* TOC
+{:toc}
+
 ## Initial Layout
 
 Here's an example of a page with a  simple layout. We've got a header at the top containing a logo and navigation, some body content, a sidebar off to the right with a related posts list and a list of social media sharing links, a search box below the content and a footer containing the contact info of our business.
