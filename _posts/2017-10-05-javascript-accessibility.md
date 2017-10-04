@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Tips for JavaScript Accessibility"
+title:  "4 JavaScript Techniques for Building Accessible Web Interfaces"
 author: Ben Robertson
 date:   2017-10-05 07:00:00 -0500
 categories: accessibility
-snippet: ""
+snippet: "Save yourself some trouble with these JavaScript techniques for developing accessible web interfaces."
 ---
 
 You're wrapping up a web project and just as you're putting the finishing touches you get sent a list of accessibility errors forwarded to you by your project manager. Inadequate color contrast. Missing alt tags. This interactive component needs to be keyboard accessible.
