@@ -1,13 +1,13 @@
 ---
 layout: post
 author: Ben Robertson
-title:  "Creating a Custom Search Endpoint with the Wordpress API"
+title:  "Creating a Custom Search Endpoint with the WordPress API"
 date:   2017-09-13 08:00:00 -0500
 categories: wordpress
-snippet: "Search multiple post types with a custom endpoint via the Wordpress API."
+snippet: "Search multiple post types with a custom endpoint via the WordPress API."
 ---
 
-I've been playing around with the Wordpress API for a few projects at work. One of the things I am frequently trying to do is serve up some suggested search results while someone is typing in a search input.
+I've been playing around with the WordPress API for a few projects at work. One of the things I am frequently trying to do is serve up some suggested search results while someone is typing in a search input.
 
 You can search posts by making a request to `/wp-json/wp/v2/posts?s=search term`, or pages by hitting `/wp-json/wp/v2/pages?s=search term`, and often this is enough for me. I add an event listener to the search input and insert the titles and permalinks in a list below the search input.
 
@@ -37,7 +37,7 @@ add_action( 'rest_api_init', 'namespace_register_search_route');
 ```
 
 ### Namespace
-The first parameter is a namespace (`namespace/v1`). Providing a namespace helps avoid conflicts with other routes, such as might be defined by core Wordpress or by other plugins and themes. A good best practice is to provide a name and a version. I used `namespace/v1`. If I was setting this up in my theme, I would use my theme slug as the namespace. If I was doing it in a plugin, I would use the plugin. In reality, you could name it anything that you think would prevent conflicts with other namespaces (like the default `wp` namespace).
+The first parameter is a namespace (`namespace/v1`). Providing a namespace helps avoid conflicts with other routes, such as might be defined by core WordPress or by other plugins and themes. A good best practice is to provide a name and a version. I used `namespace/v1`. If I was setting this up in my theme, I would use my theme slug as the namespace. If I was doing it in a plugin, I would use the plugin. In reality, you could name it anything that you think would prevent conflicts with other namespaces (like the default `wp` namespace).
 
 ### Endpoint
 The second parameter is an endpoint. Since I'm building a search component, I called it `/search`. Combine the namespace and endpoint with the wp-json prefix and that's where you'd make a request to your endpoint. In this example, we would hit `/wp-json/namespace/v1/search` to get a response from this endpoint.
@@ -46,7 +46,7 @@ The second parameter is an endpoint. Since I'm building a search component, I ca
 The next argument is an array of options.
 
 #### Methods
-First up is `method`. I'm using a Wordpress constant here (`WP_REST_Server::READABLE`), and this is basically equivalent to setting the method to `GET`. I only want to make `GET` requests to my endpoint, so that's what I'm making available.
+First up is `method`. I'm using a WordPress constant here (`WP_REST_Server::READABLE`), and this is basically equivalent to setting the method to `GET`. I only want to make `GET` requests to my endpoint, so that's what I'm making available.
 
 #### Callback
 The callback argument allows us to specify the callback function that will process the request. I named this function `namespace_ajax_search`, since it's going to process the Ajax search from our front-end.
@@ -84,11 +84,11 @@ function namespace_ajax_search( $request ) {
 
 Let me break this down now. It takes one parameter: the request data from our API request. Here's an example `GET` request my Javascript is making: `/wp-json/namespace/v1/search?s=search+term`. The search term is what I need in order to find results and return them.
 
-In my callback function above, I check if there is a search term specified and then run a query for the term using `get_posts`. With the `post_type` argument, I'm specifically telling Wordpress to search in pages, posts, and a custom post type. You  can add as many post types here as you want. And of course, I pass in my search term with the `s` argument.
+In my callback function above, I check if there is a search term specified and then run a query for the term using `get_posts`. With the `post_type` argument, I'm specifically telling WordPress to search in pages, posts, and a custom post type. You  can add as many post types here as you want. And of course, I pass in my search term with the `s` argument.
 
 After I get my data, I then loop through it to make it a little friendly to deal with on the front end. I really only need the title of the result and the permalink, so I create a new array with the title and permalink set.
 
-If there are no results, I return an error. Otherwise I return my formatted results array wrapped in the Wordpress [rest_ensure_response()](https://developer.wordpress.org/reference/functions/rest_ensure_response/) function to properly handle the response wrappers.
+If there are no results, I return an error. Otherwise I return my formatted results array wrapped in the WordPress [rest_ensure_response()](https://developer.wordpress.org/reference/functions/rest_ensure_response/) function to properly handle the response wrappers.
 
 #### Arguments
 The third option I passed in is the arguments that the endpoint will respond to. In our example, the only argument is our search term `s`, but if you wanted, you could get fancy and add other filters like post category or date modified.
@@ -109,7 +109,7 @@ function namespace_get_search_args() {
 
 I give my argument a little description so that if other people end up working with the API they get some info when requesting this endpoint.
 
-![A preview of the endpoint information returned by Wordpress. (Preview generated via the Postman app)](/assets/img/search-endpoint-desc.png)
+![A preview of the endpoint information returned by WordPress. (Preview generated via the Postman app)](/assets/img/search-endpoint-desc.png)
 
 If you wanted to define more arguments, you would do it in this function in the `$args` array.
 
