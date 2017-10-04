@@ -44,6 +44,11 @@ collections:
 
 # Build settings
 markdown: kramdown
+
+kramdown:
+    parse_block_html: true
+    toc_levels: 1..2
+
 # theme: minima
 gems:
   - jekyll-feed
