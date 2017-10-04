@@ -7,9 +7,11 @@ categories: accessibility
 snippet: ""
 ---
 
-When you're first getting started with web accessibility, it's easy to be intimidated. If you are like me, you ran the site you were working on through one of those accessibility scanners (a11y, pa11y, wave, etc) and found hundreds of errors. As you start to comb through the errors, you realize that a lot of them are actually simple fixes, like fixing color contrast, and some of them are false positives, because those tools can't tell whether contrast is strong enough for text over a background image.
+You're wrapping up a web project and just as you're putting the finishing touches you get sent a list of accessibility errors forwarded to you by your project manager. Inadequate color contrast. Missing alt tags. This interactive component needs to be keyboard accessible.
 
-Eventually you get to the errors for elements that had click event listeners added to them via JavaScript with no programmatically set title, and then things start to get weird. When you're first starting off, interactivity can be hard to manage, let alone if you are trying to make it accessible. I've found it's easy to end up down a rabbit hole of `aria` attributes that you aren't sure are even correct. But accessible Javascript doesn't have to be crazy difficult. Here are 5 accessibility best practices when writing Javascript.
+We might not like to admit it but we've all been there: at the end of a project trying to reverse engineer accessibility into our site. It's frustrating for developers, designers, project managers and clients.
+
+While accessibility can be frustrating, you can set yourself, your team, and your client up for success by planning for accessibility from the beginning. Here are 4 techniques to save you time and trouble when building accessible JavaScript-enabled websites and applications.
 
 * TOC
 {:toc}
