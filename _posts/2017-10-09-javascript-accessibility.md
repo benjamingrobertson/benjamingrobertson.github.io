@@ -2,7 +2,7 @@
 layout: post
 title:  "Tips for JavaScript Accessibility"
 author: Ben Robertson
-date:   2017-10-09 07:00:00 -0500
+date:   2017-10-05 07:00:00 -0500
 categories: accessibility
 snippet: ""
 ---
@@ -28,7 +28,7 @@ When you use the `<button>` element for interface elements that are clickable an
 
 First, **buttons are automatically focusable**; they are in the tab index of a page. If a user lands on your site and is only using a keyboard, they can press the tab key to cycle through all the focusable elements, including hyperlinks and buttons, on your page.
 
-Second, screen readers will announce to a user that a button is in focus. **Screen reader users know by default that button elements are interactive**. This makes it especially important to include clear, understandable text inside your `<button>` so all users can understand what clicking it will do. There are also some helpful `aria` attributes you can add to your button, but we'll get to that later.
+Second, screen readers will announce to a user that a button is in focus. **Screen reader users know by default that button elements are interactive**. This makes it especially important to include clear, understandable text inside your `<button>` so all users can understand what clicking it will do. There are also some helpful `aria` attributes you can add to your button, but we'll [get to that later](#3-manage-aria-states).
 
 Third, when you add a click event listener to a `<button>` element, **you get keyboard accessibility for free.** This means can write less javascript when you use the `<button>` element. By contrast, if you add a click event listener to a `div`, you would also have to add keyup listeners for the spacebar and enter keys in order to make that element accessible to keyboards. With the button element, the default keyboard actions (spacebar and enter) and screen reader click actions trigger the click event. You don't have to write extra keyboard listeners.
 
@@ -43,7 +43,7 @@ For instance, is there a close or minimize button on your component? The ESC key
 Common interactions can include:
 1. Exiting the current component
 2. Submitting
-3. Moving position / browsing.
+3. Moving position / browsing
 
 Common keys to add actions to:
 - enter (keyCode 13)
@@ -60,7 +60,7 @@ document.addEventListener('keyup', (event) => {
 });
 ```
 
-Here is a common pattern I end up using in components, with the most common keyCodes that I use:
+To make things a little bit easier though, I'll document the most common keycodes I end up needint to reference. Here is a common pattern I end up using in components, with the most common keyCodes that I use:
 
 ```js
 document.addEventListener('keyup', (event) => {
@@ -103,11 +103,11 @@ You can take this to another level and test whether the user was also holding do
 
 ## 3. Manage ARIA states
 
-There's a lot to the Web Accessibility Initiative's Accessibility of Rich Internet Applications (WAI-ARIA, or just ARIA) spec, but when you're getting started with interactive Javascript you should really focus on the `aria-expanded` attribute.
+There's a lot to the [Web Accessibility Initiative's Accessibility of Rich Internet Applications](https://www.w3.org/WAI/intro/aria) (WAI-ARIA, or just ARIA) spec, but when you're getting started with interactive Javascript you should really focus on the `aria-expanded` attribute.
 
 A lot of interactivity is focused on showing or hiding content on the page. The `aria-expanded` property "indicates whether the element, or another grouping element it controls, is currently expanded or collapsed," according to the [W3C spec](https://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded).
 
-You'll want to make sure that your element renders with the appropriate `aria-expanded` attribute--false if the element is not expanded, true if the element is expanded. This attribute should be applied to the element that controls the expandable element. If the grouping element is a child of the controlling element, you don't need to do anything special, but if you have a `<button>` that is going to control a sibling `<ul>`, you will need to indicate that that the button controls the list with the `aria-controls` attribute ([aria-controls documentation at W3C](https://www.w3.org/TR/wai-aria/states_and_properties#aria-controls)). This attribute accepts an ID or list of IDs that are controlled by the interactive element. In our example, our markup would look like this:
+You'll want to make sure that your element renders with the appropriate `aria-expanded` attribute:  false if the element is not expanded, true if the element is expanded. This attribute should be applied to the element that controls the expandable element. If the grouping element is a child of the controlling element, you don't need to do anything special, but if you have a `<button>` that is going to control a sibling `<ul>`, you will need to indicate that that the button controls the list with the `aria-controls` attribute ([aria-controls documentation at W3C](https://www.w3.org/TR/wai-aria/states_and_properties#aria-controls)). This attribute accepts an ID or list of IDs that are controlled by the interactive element. In our example, our markup would look like this:
 
 ```html
 <button class="list-expander" aria-expanded="false" aria-controls="expandable-list-1">Expand List</button>
@@ -141,7 +141,9 @@ You can use this same kind of thinking with other true / false ARIA attributes. 
 
 The last thing we'll cover in this guide is managing focus. Focus refers to the singular element in the browser that is able to be acted upon via the keyboard. Elements often receive focus when a user clicks on them, uses the TAB key to cycle through focusable elements, or uses a screen reader. At a basic level, you need to make sure that users can visually tell at any time what element is in focus.
 
-The most common place that I end up managing focus is in modal components. Here's a sample problem we need to solve. We have an about page that contains a bio of a person and a button that says "Contact this person". This button opens a modal that contains a contact form. But if the form is not in the natural tab order of the page (as is common with modals), when the user hits tab their keyboard focus is behind the modal. It's common for keyboard and assistive technology users to get stuck and frustrated with poorly designed modals.
+The most common place that I end up managing focus is in modal components.
+
+Here's a sample problem we need to solve. We have an about page that contains a bio of a person and a button that says "Contact this person". This button opens a modal that contains a contact form. But if the form is not in the natural tab order of the page (as is common with modals), when the user hits tab their keyboard focus is behind the modal. It's common for keyboard and assistive technology users to get stuck and frustrated with poorly designed modals.
 
 To solve this, we want to do a couple of things:
 
@@ -253,7 +255,7 @@ export function trapTabKey(e, context) {
 
 First, we need to pass in the event object so we can detect what key is being pressed and a context for the user to be "trapped" inside of.
 
-If the key they pressed was NOT the TAB key, we can safely return and do nothing.
+If the key they pressed was **not** the TAB key, we can safely return and do nothing.
 
 If it **was** the TAB key, we get all the focusable elements in the modal and the element they are currently focused on. Once we have these two things, we can use the `indexOf` method to tell where the user is in the tab order of this context.
 
@@ -273,4 +275,4 @@ We've covered a lot here, but it should be a really good start for you to start 
 3. Think about and manage any appropriate ARIA states.
 4. Manage focus when necessary.
 
-Your users will thank you!
+Keeping these techniques in mind from the beginning will save you time and trouble and your users will thank you!
