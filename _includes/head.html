@@ -10,6 +10,7 @@
 
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description" content="{{ page.snippet | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    {% include head-social.html %}
 
     <script src="//use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n7,i7,n9.js"></script>
     <link rel="stylesheet" href="{{ site.url }}/assets/main.css">
