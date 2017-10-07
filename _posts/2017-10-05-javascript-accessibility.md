@@ -60,7 +60,7 @@ document.addEventListener('keyup', (event) => {
 });
 ```
 
-To make things a little bit easier though, I'll document the most common keycodes I end up needint to reference. Here is a common pattern I end up using in components, with the most common keyCodes that I use:
+To make things a little bit easier though, I'll document the most common keycodes I end up needing to reference. Here is a common pattern I end up using in components, with the most common keyCodes that I use:
 
 ```js
 document.addEventListener('keyup', (event) => {

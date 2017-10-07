@@ -2,7 +2,7 @@
 layout: post
 title:  "Build a Style Guide Straight from Sass"
 author: Ben Robertson
-date:   2017-10-06 01:00:00 -0500
+date:   2017-10-17 07:00:00 -0500
 categories: front-end
 snippet: "A little guide I wrote for *CSS-Tricks*."
 canonical: https://css-tricks.com/build-style-guide-straight-sass/
