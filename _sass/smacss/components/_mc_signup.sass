@@ -60,20 +60,6 @@
         margin-top: 0
 
 
-@keyframes shake
-    25%
-        transform: rotate(1deg) translateX(-1em) translateY(.5em)
-
-    50%
-        transform: rotate(-1deg) translateX(-1em) translateY(.5em)
-
-    75%
-        transform: rotate(1deg) translateX(-1em) translateY(.5em)
-
-    100%
-        transform: rotate(-2deg) translateX(-1em) translateY(.5em)
-
-
 .callout
     background-color: #eee
     max-width: 40rem
@@ -85,9 +71,6 @@
     padding-bottom: 3.5em
 
     transform: rotate(-1deg) translateX(-1em) translateY(.5em)
-
-    &.shake
-        animation: shake 400ms 1
 
     @media (min-width: 60rem)
         padding-left: calc((100% - 55rem) / 2)
