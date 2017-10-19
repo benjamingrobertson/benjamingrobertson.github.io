@@ -4,7 +4,7 @@ title:  "Notes on Animation at Work"
 author: Ben Robertson
 date:   2017-10-19 07:00:00 -0500
 categories: front-end
-snippet: "A little guide I wrote for *CSS-Tricks*."
+snippet: "My takeaways from Rachel Nabor's Animation at Work. My rating: 👍👍"
 ---
 
 At work this summer, our team started experimenting a little with more interactive, animated experiences (for [Marian University](http://findout.marian.edu/what-are-you-made-of/) and the new Up&Up homepage - coming soon). As I started development on these projects, I quickly realized that our normal design to development workflow was going to be inadequate. I sat at my desk, staring at a video with split-second animations and wondered how on earth I was supposed to figure out everything that was animated.
