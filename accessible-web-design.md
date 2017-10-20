@@ -2,6 +2,7 @@
 layout: book
 title: Accessible Web Design
 headline: Tired of inaccessible web accessibility guidelines?
+snippet: A step by step guide to building accessible web sites.
 permalink: /accessible-web-design/
 ---
 

@@ -2,7 +2,8 @@
 layout: cornerstone
 title: Accessibility
 permalink: /accessibility/
+snippet: "Some tips, tricks, and guidelines for building accessible web experiences."
 categories: accessibility
 ---
 
-intro content
+Some tips, tricks, and guidelines for building accessible web experiences.
