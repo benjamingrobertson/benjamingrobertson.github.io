@@ -2,10 +2,10 @@
 layout: post
 title:  "A Simple Introduction to Web Accessibility"
 author: Ben Robertson
-date:   2017-11-03 07:00:00 -0500
+date:   2017-11-07 09:00:00 -0500
 categories: accessibility
-snippet: "Web accessibility is getting a lot of attention these days, but it can be a confusing--even inaccessible--topic."
-canonical: https://www.upandup.agency
+snippet: "Web accessibility is getting a lot of attention these days, but it can be a confusing--even inaccessible--topic. Here's a simple introduction to web accessibility."
+canonical: https://www.upandup.agency/accessibility/web-accessibility-intro
 ---
 
 Web accessibility is getting a lot of attention these days, but it can be a confusing--even *inaccessible*--topic. Here's a simple introduction to web accessibility: what it is, why it's important, and the benefits that come along with accessibility.
