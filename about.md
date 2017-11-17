@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-Hi, I’m Ben, a friendly web developer for [Up&Up](https://www.upandup.agency) in Greenville, SC. In my free time I enjoy biking, hiking, gardening, exploring Greenville, learning new things, and hanging out at our awesome public library.
+Hi, I’m Ben, a front-end web developer in Greenville, SC. In my free time I enjoy biking, hiking, gardening, exploring Greenville, learning new things, and hanging out at our awesome public library.
 
 I create fun, innovative, accessible, and fast websites. I try to leave every bit I code I touch more readable, performant and accessible than I found it.
 
