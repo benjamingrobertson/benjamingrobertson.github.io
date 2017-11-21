@@ -1,9 +1,9 @@
 ---
 layout: book
-title: Accessible Web Design
+title: Accessibility for Web Developers
 headline: Tired of inaccessible web accessibility guidelines?
-snippet: A step by step guide to building accessible web sites.
-permalink: /accessible-web-design/
+snippet: A step by step guide to building accessible web sites for web developers.
+permalink: /accessibility-for-web-developers/
 ---
 
 <div class="">
