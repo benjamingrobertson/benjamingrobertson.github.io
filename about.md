@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-Hi, I’m Ben, a front-end web developer in Greenville, SC. In my free time I enjoy biking, hiking, gardening, exploring Greenville, learning new things, and hanging out at our awesome public library.
+Hi, I’m Ben, a front-end web developer in Greenville, SC for [Mediacurrent](http://www.mediacurrent.com/). In my free time I enjoy biking, hiking, gardening, exploring Greenville, learning new things, and hanging out at our awesome public library.
 
 I create fun, innovative, accessible, and fast websites. I try to leave every bit I code I touch more readable, performant and accessible than I found it.
 
@@ -21,8 +21,11 @@ These are the accomplishments I'm most proud of:
 
 ## Experience
 
+### Media Current
+**Front End Developer** | December 2017 - Present
+
 ### Up&Up Agency
-**Front End Developer** \| February 2015 - Present
+**Front End Developer** \| February 2015 - November 2017
 
 #### Key Responsibilities:
 

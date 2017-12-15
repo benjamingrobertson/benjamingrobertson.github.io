@@ -2,9 +2,9 @@
 layout: post
 title:  "Lazy Loading Video Based on Connection Speed"
 author: Ben Robertson
-date:   2017-11-28 09:00:00 -0500
+date:   2017-12-01 09:00:00 -0500
 categories: front-end
-snippet: ""
+snippet: "How to conditionally load a video based on connection speed using vanilla JavaScript and Promises."
 ---
 
 We recently redesigned the [Up&Up](https://www.upandup.agency) website from the ground up. The team wanted to do one of those full-screen background videos on the home page. I wasn't excited about it because the home page was already a little unwieldy with the large background images and some of the scroll-jacky things we are doing there.
@@ -31,7 +31,6 @@ Since the video is a progressive enhancement in this example, we don't need or w
     <source data-src="path/to/upup_homepage_loop.mp4" type="video/mp4">
 </video>
 ```
-
 
 ## The JavaScript
 I wrote a small JavaScript class that looks for any video that has a `.js-video-loader` class on it so that we could reuse this  logic in the future for other videos.
