@@ -29,3 +29,6 @@ source 'https://rubygems.org'
 require 'json'
 require 'open-uri'
 versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+
+# Added at 2017-12-18 12:11:32 -0500 by mediacurrent:
+gem "capistrano", "~> 2.15"
