@@ -1,0 +1,24 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>{{ site.title }} | Updates</title>
+        <description>{{ site.description }}</description>
+        <link>{{ site.url }}</link>
+        {% for update in site.updates %}
+        <item>
+            <title>test</title>
+            <description><![CDATA[
+                {{ update.content }}
+            ]]></description>
+            <pubDate>{{ update.date }}</pubDate>
+            <guid isPermalink="false">{{ update.url }}</guid>
+            <link>{{ update.url }}</link>
+            <author>{{ update.author }}</author>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>
+</xml>
