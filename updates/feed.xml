@@ -9,16 +9,15 @@ layout: null
         <link>{{ site.url }}</link>
         {% for update in site.updates %}
         <item>
-            <title>test</title>
+            <title></title>
             <description><![CDATA[
                 {{ update.content }}
             ]]></description>
             <pubDate>{{ update.date }}</pubDate>
             <guid isPermalink="false">{{ update.url }}</guid>
             <link>{{ update.url }}</link>
-            <author>{{ update.author }}</author>
+            <author>{{ site.author }}</author>
         </item>
         {% endfor %}
     </channel>
 </rss>
-</xml>
