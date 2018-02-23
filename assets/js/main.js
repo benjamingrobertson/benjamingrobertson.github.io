@@ -10,9 +10,6 @@ function addlink(item) {
     item.insertAdjacentHTML('beforeend', `<a class="heading__anchor-link" href="#${item.id}">#link</a>`);
 }
 
-
-
-
 var isInViewport = function (elem) {
     var distance = elem.getBoundingClientRect();
     return (
@@ -35,4 +32,16 @@ if (callout) {
             callout.classList.remove('shake')
         }
     })
+}
+
+
+var form = document.querySelector(".search__form");
+
+if(form) {
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        var search = form.querySelector("input[type=search]");
+        search.value = "site:benrobertson.io " + search.value;
+        form.submit();
+    });
 }
