@@ -7,7 +7,8 @@ layout: null
         <title>{{ site.title }} | Updates</title>
         <description>{{ site.description }}</description>
         <link>{{ site.url }}</link>
-        {% for update in site.updates %}
+        {% assign sorted = site.updates | reverse %}
+        {% for update in sorted %}
         <item>
             <title></title>
             <description><![CDATA[

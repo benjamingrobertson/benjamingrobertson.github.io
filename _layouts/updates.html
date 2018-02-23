@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="l-contain--small l-contain--center">
+    <h1 class="page-heading">Updates</h1>
+    {{ content }}
+    <hr>
+
+    {% assign sorted = site.updates|reverse %}
+    {% for update in sorted %}
+    <article>
+        {{ update.content }}
+        <date class="post-meta"></date>{{ update.date | date: "%b %-d, %Y" }}</date>
+    </article>
+    <hr>
+    {% endfor %}
+</div>

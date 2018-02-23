@@ -40,7 +40,7 @@ collections:
   work:
     output: true
   updates:
-    output: false
+    output: true
 
 # Build settings
 markdown: kramdown
