@@ -9,9 +9,9 @@ layout: default
 
     {% assign sorted = site.updates|reverse %}
     {% for update in sorted %}
-    <article>
+    <article class="update">
         {{ update.content }}
-        <date class="post-meta"></date>{{ update.date | date: "%b %-d, %Y" }}</date>
+        <date class="update-meta">{{ update.date | date: "%b %-d, %Y" }}</date>
     </article>
     <hr>
     {% endfor %}
