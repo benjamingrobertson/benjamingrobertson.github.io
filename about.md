@@ -21,7 +21,7 @@ These are the accomplishments I'm most proud of:
 
 ## Experience
 
-### Media Current
+### Mediacurrent
 **Front End Developer** | December 2017 - Present
 
 ### Up&Up Agency
