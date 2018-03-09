@@ -133,4 +133,4 @@ The IISTC ([International Institute for the Study of Technology and Christianity
 
 ## About this site
 
-This site is a simple, responsive [Jekyll](http://jekyllrb.com/) theme I designed and built using the Minima theme as the initial structure. The type is set in [Adobe Source Sans Pro](https://edgewebfonts.adobe.com/fonts#/?nameFilter=source&collection=source-sans-pro) and served via [Adobe Edge Web Fonts](https://edgewebfonts.adobe.com/index).
+This site is a simple, responsive [Jekyll](http://jekyllrb.com/) theme I designed and built using the Minima theme as the initial structure. The type is set in [Adobe Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro).
