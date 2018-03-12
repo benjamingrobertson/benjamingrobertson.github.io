@@ -11,7 +11,10 @@ layout: default
     {% for update in sorted %}
     <article class="update">
         {{ update.content }}
-        <date class="update-meta">{{ update.date | date: "%b %-d, %Y" }}</date>
+        <div class="update-meta">
+            <date>{{ update.date | date: "%b %-d, %Y" }}</date> |
+            <a href="{{ update.url }}" class="u-url">permalink</a>
+        </di>
     </article>
     <hr>
     {% endfor %}

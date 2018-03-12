@@ -42,6 +42,14 @@ collections:
   updates:
     output: true
 
+
+defaults:
+  - scope:
+      path: ""
+      type: "updates"
+    values:
+      layout: update
+
 # Build settings
 markdown: kramdown
 
