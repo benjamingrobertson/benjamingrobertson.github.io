@@ -2,7 +2,7 @@
 layout: post
 title:  "Component Based Development Using UI Patterns"
 author: Ben Robertson
-date:   2018-04-02 09:00:00 -0500
+date:   2018-04-03 09:00:00 -0500
 categories: announcements
 snippet: "Join me and my Mediacurrent friends for a training session on component driven development at DrupalCon in Nashville next week!"
 canonical: https://www.mediacurrent.com/blog/join-our-drupalcon-training-session-component-based-development-using-ui-patterns/
