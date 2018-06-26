@@ -77,18 +77,23 @@
 
 
 .callout--book
-    margin-top: 5em
-
-    form
+    .cta
         margin: 0 2em
 
     .book
-        float: left
-        margin-top: -6em
-        margin-left: 3em
-        margin-right: 2em
-        height: 275px
-        width: 200px
+        margin: -2em auto 0
+        display: block
+        width: 100%
+
+        @media (min-width: 600px)
+            width: 250px
+            float: left
+
+        @media (min-width:35em)
+            width: 300px
+
+    form
+        margin: 0 2em
 
 
 
@@ -96,6 +101,7 @@
     @media (min-width: 35em)
         display: flex
         align-items: flex-end
+        flex-wrap: wrap
 
     label
         display: block
@@ -109,6 +115,7 @@
         border: 1px solid #ccc
         background: #fff
         font-size: 1em
+        margin-bottom: 1em
 
         &:focus
             outline: 2px solid $brand-primary
@@ -129,7 +136,8 @@
 
         transition: 300ms background, 300ms color, 300ms border-color
 
-        &:hover
+        &:hover,
+        &:focus
             background: $green
             color: #fff
             border-color: $green
