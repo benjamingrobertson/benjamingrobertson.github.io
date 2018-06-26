@@ -5,8 +5,10 @@
     @media (min-width: 48em)
         margin: 1em
         margin-top: 5em
-        position: sticky
-        top: 100px
+
+        @supports(position: sticky)
+            position: sticky
+            top: 100px
 
 
 .book__text
