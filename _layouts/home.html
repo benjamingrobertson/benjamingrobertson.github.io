@@ -1,43 +1,53 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en-US " }}">
+---
+layout: default
+---
 
-{% include head.html %}
+<div class="l-contain l-contain--center">
+    <div>
+        <h1>Hi, I'm Ben Robertson.</h1>
+        <p>🛠 I'm a front end developer at <a href="https://mediacurrent.com">Mediacurrent</a>.</p>
+        <p>✍️ I write about <a href="/blog">front end development</a> and <a href="/accessibility">web accessibility</a>.</p>
+        <p>✈️ I help <a href="https://frontendremotejobs.com">front end developers find remote jobs</a>.</p>
+    </div>
 
-<body>
-    <header class="home__header l-contain l-contain--center">
-        <div class="h-card">
-            <h1><a href="{{ site.url }}" rel="me" class="p-name u-url">Ben Robertson</a></h1>
-            <img class="u-photo" src="{{ site.url }}/assets/img/ben.jpg" height="175" width="175" alt="headshot of Ben Robertson">
-            <p class="p-note">Web developer 💻. Gardener 🌱. Bicycler 🚴🏼. Blues Brother 🕶.</p>
-            <div class="profiles">
-                <a class="no-decoration u-url" href="https://twitter.com/banquos_ghost" rel="me">
-                    <span class="icon icon--twitter">{% include icon-twitter.svg %}</span>
-                    <span class="username">@banquos_ghost</span>
-                </a>
-                &middot;
-                <a class="no-decoration u-url" href="https://github.com/benjamingrobertson" rel="me">
-                    <span class="icon icon--github">{% include icon-github.svg %}</span>
-                    <span class="username">benjamingrobertson</span>
-                </a>
-                &middot;
-                <a class="no-decoration u-url" href="{{ base.url }}/feed.xml" rel="me">
-                    <span class="icon icon--rss">{% include icon-rss.svg %}</span>
-                    <span class="username">rss</span>
-                </a>
+    <div id="mc_embed_signup" class="mc-signup">
+        <h2>Get updates about my writing and work.</h2>
+        <p>I send an email about once a month, if I have something interesting or useful to share. Here's an <a href="https://mailchi.mp/550764ebda3b/10-common-accessibility-mistakes-and-how-to-avoid-them">example email</a>.</p>
+
+        <form action="//benjamingrobertson.us15.list-manage.com/subscribe/post?u=aafc0f8e65dbc564446043b15&amp;id=6e6d0bd232" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll" class="mc-signup__form-group">
+                <div class="mc-field-group">
+                    <label for="mce-FNAME">First Name </label>
+                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                </div>
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address </label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_aafc0f8e65dbc564446043b15_6e6d0bd232" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
             </div>
-        </div>
-
-    </header>
-    <main class="home l-contain l-contain--center">
-        <section class="grid-item about">
+        </form>
+    </div>
+    <div class="home-grid">
+        <section class="grid-item blog">
             <header class="section-header">
-                <h2>About Me</h2>
+                <h2>Recent Writing</h2>
                 <hr>
             </header>
-            <p>Hi, I’m Ben, a front-end web developer in Greenville, SC. In my free time I enjoy biking, hiking, gardening, exploring Greenville, learning new things, and hanging out at our awesome public library.</p>
-
-            <p>I create fun, innovative, accessible, and fast websites. This includes award-winning front-end development as well as building out custom Drupal and Wordpress backends with an eye towards usability.</p>
-            <a href="/about">More About Me →</a>
+            <ul>
+                {% for post in site.posts limit: 5 %}
+                    <li>
+                        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <date> - {{ post.date | date: "%b %-d, %Y" }}</date>
+                    </li>
+                {% endfor %}
+            </ul>
+            <a href="/blog">More Blog Posts →</a>
         </section>
         <section class="grid-item micro-blog">
             <header class="section-header">
@@ -51,42 +61,5 @@
             </article>
             {% endfor %}
         </section>
-        <section class="blog">
-            <header class="section-header">
-                <h2>Blog</h2>
-                <hr>
-            </header>
-            {% for post in site.posts limit: 5 %}
-            <article class="home__article">
-                <header>
-                    <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-                    <date> - {{ post.date | date: "%b %-d, %Y" }}</date>
-                </header>
-                <p>{{post.snippet}}</p>
-                <a href="{{ post.url | relative_url }}">Read More</a>
-            </article>
-            {% endfor %}
-            <a href="/blog">More Blog Posts →</a>
-        </section>
-        <!-- Coming soon 👀
-            <section class="grid-item work">
-                <header class="section-header">
-                    <h2>Work</h2>
-                    <hr>
-                </header>
-                {% assign work = site.work | reverse %}
-                {% for work in work limit: 5 %}
-                    <article>
-                        <h3>{{ work.title | escape }}</h3>
-                        <p>{{work.snippet}}</p>
-                        <a href="{{ work.url | relative_url }}">Read More</a>
-                    </article>
-                {% endfor %}
-            </section> -->
-    </main>
-
-    {% include footer.html %}
-
-</body>
-
-</html>
+    </div>
+</div>

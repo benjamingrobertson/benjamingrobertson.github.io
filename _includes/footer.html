@@ -1,6 +1,23 @@
 <footer id="footer">
     <div class="site-footer">
         <div class="l-contain l-contain--center">
+            <div class="profiles">
+                <a class="no-decoration u-url" href="https://twitter.com/banquos_ghost" rel="me">
+                    <span class="icon icon--twitter">{% include icon-twitter.svg %}</span>
+                    <span class="username">@banquos_ghost</span>
+                </a>
+                &middot;
+                <a class="no-decoration u-url" href="https://github.com/benjamingrobertson" rel="me">
+                    <span class="icon icon--github">{% include icon-github.svg %}</span>
+                    <span class="username">benjamingrobertson</span>
+                </a>
+                &middot;
+                <a class="no-decoration u-url" href="{{ base.url }}/feed.xml" rel="me">
+                    <span class="icon icon--rss">{% include icon-rss.svg %}</span>
+                    <span class="username">rss</span>
+                </a>
+            </div>
+
             <p>
                 &copy; {{ 'now' | date: "%Y" }} <a href="{{site.url}}">{{site.title}}</a>
             </p>
