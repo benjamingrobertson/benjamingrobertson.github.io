@@ -9,18 +9,18 @@ snippet: "I presented at DrupalCamp Asheville on my personal accessibility princ
 
 ![Ben presenting a slide titled 'Alternatives to Divs' during his session at DrupalCamp Asheville.](/assets/img/dc-asheville-picture.jpg)
 
-This weekend I had the privilege to present a session at [DrupalCamp Asheville](https://www.drupalasheville.com/): **Common Accessibility Mistakes and How to Avoid Them**. It was a lot of fun, and my first time presenting my own session at a web development conference! 
+This weekend I had the privilege to present a session at [DrupalCamp Asheville](https://www.drupalasheville.com/): **Common Accessibility Mistakes and How to Avoid Them**. It was a lot of fun, and my first time presenting my own session at a web development conference!
 
-I discussed four of my own homegrown principles for developing accessible websites:  
+I discussed four of my own homegrown principles for developing accessible websites:
 
 1. Web Design is more than graphic design
-2. Be ASAP: As Semantic As Possible 
+2. Be ASAP: As Semantic As Possible
 3. Websites should look good naked
 4. Talk to your computer (Use ARIA attributes)
 
-I also covered 10 common accessibility mistakes that I come across (and that I've personally made).    
-  
-I've uploaded the slides to slideshare: [Common Accessibility Mistakes and How to Avoid Them](https://www.slideshare.net/BenjaminRobertson5/common-accessibility-mistakes-and-how-to-avoid-them/). 
+I also covered 10 common accessibility mistakes that I come across (and that I've personally made).
+
+I've uploaded the slides to [Notist](https://noti.st/benrobertson/1jquVJ/common-accessibility-mistakes-and-how-to-avoid-them) and [Slideshare](https://www.slideshare.net/BenjaminRobertson5/common-accessibility-mistakes-and-how-to-avoid-them/).
 
 Best of all, the recording is on [YouTube](https://www.youtube.com/watch?v=elxxIgr21Pw) already, I've embedded it below:
 
