@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "4 JavaScript Techniques for Building Accessible Web Interfaces"
+title:  "How to Write Accessible Javascript"
 author: Ben Robertson
 date:   2017-10-05 07:00:00 -0500
 categories: accessibility
@@ -268,6 +268,8 @@ We need to call `e.preventDefault()` for both of these cases to prevent the defa
 You'll want to make sure you remove your `keyup` event listener when the user closes the modal to let their TAB functionality return to normal.
 
 ## Conclusion
+{:.no_toc}
+
 We've covered a lot here, but it should be a really good start for you to start developing accessible interactive JavaScript sites and applications and give you a framework for thinking about how you might program other widgets and components. Remember to:
 
 1. Use `<button>` for clickable elements
