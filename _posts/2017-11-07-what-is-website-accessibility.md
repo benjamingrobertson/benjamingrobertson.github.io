@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Simple Introduction to Web Accessibility"
+title:  "What is Website Accessibility?"
 author: Ben Robertson
 date:   2017-11-07 08:00:00 -0500
 categories: accessibility

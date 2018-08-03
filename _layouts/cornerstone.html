@@ -22,8 +22,10 @@ layout: default
 </div>
 
 
-{% if page.categories contains "accessibility" %}
-{% include signup-awd.html %}
-{% else %}
-{% include signup.html %}
-{% endif %}
+{% include
+    signup.html
+    listId="c13c8e9339"
+    title="Free Email Course: <br>Common Accessibility Mistakes and How to Fix Them"
+    content="A month long course to help you simplify web accessibility."
+    submit="Sign me up!"
+    %}
