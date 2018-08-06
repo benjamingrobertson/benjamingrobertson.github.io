@@ -3,6 +3,7 @@ layout: post
 title:  "Focus Rings for Keyboard Interactions Only"
 author: Ben Robertson
 date:   2017-10-10 07:00:00 -0500
+updated: 2018-08-02
 categories: accessibility
 snippet: "Implementing the :focus-visible polyfill for better focus styles."
 ---
