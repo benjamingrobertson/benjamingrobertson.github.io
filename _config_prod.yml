@@ -18,7 +18,7 @@ email: hi@benrobertson.io
 description: > # this means to ignore newlines until "baseurl:"
     I’m Ben Robertson, a front end developer working at Mediacurrent and writing about front end development and web accessibility.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://benrobertson.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://benrobertson.netlify.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: banquos_ghost
 github_username:  benjamingrobertson
 
