@@ -24,6 +24,8 @@ github_username:  benjamingrobertson
 
 webmentions:
   username: benrobertson.io
+  legacy_domains:
+    - benrobertson.io
 
 disqus:
   shortname: benjamin-robertson
