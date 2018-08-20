@@ -22,6 +22,9 @@ url: "https://benrobertson.netlify.com" # the base hostname & protocol for your 
 twitter_username: banquos_ghost
 github_username:  benjamingrobertson
 
+webmentions:
+  username: benrobertson.io
+
 disqus:
   shortname: benjamin-robertson
 
