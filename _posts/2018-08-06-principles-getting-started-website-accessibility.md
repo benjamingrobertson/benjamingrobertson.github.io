@@ -218,7 +218,7 @@ The `aria-label` attribute can be added as an attribute of an HTML element to te
 
 #### `aria-labelledby`
 
-If you want to concatentate several existing text nodes into a single aria-label, you should use `aria-labelledby`. This attribute will accept one or more ID references to the text nodes you want to use to label the input. Here's an example:
+If you want to concatenate several existing text nodes into a single aria-label, you should use `aria-labelledby`. This attribute will accept one or more ID references to the text nodes you want to use to label the input. Here's an example:
 
 ```html
 <p id="sample-id">Some Text</p>
