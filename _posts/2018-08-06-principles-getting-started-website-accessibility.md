@@ -214,7 +214,20 @@ Here are some examples:
 
 #### `aria-label`
 
-The `aria-label` attribute can be added as an attribute of an HTML element to tell a screen reader what it is. I use these on links a lot, to provide extra context to screen reader users for where the link is going.
+The `aria-label` attribute can be added as an attribute of an HTML element to tell a screen reader what it is. I use these on links a lot, to provide extra context to screen reader users for where the link is going. The value of `aria-label` should be a string that describes what the element is.
+
+#### `aria-labelledby`
+
+If you want to concatentate several existing text nodes into a single aria-label, you should use `aria-labelledby`. This attribute will accept one or more ID references to the text nodes you want to use to label the input. Here's an example:
+
+```html
+<p id="sample-id">Some Text</p>
+<input aria-labelledby="sample-id another-id" value="" />
+<p id="another id">That defines this input.</p>
+```
+A screen reader will read the input as "Some text that defines this input".
+
+The cool thing about this is that it concatenates the text of all the IDs you pass in. (aria-label does not have this same functionality). There are few examples of [why you might want to concatenate labels](https://www.w3.org/WAI/GL/wiki/Using_aria-labelledby_to_concatenate_a_label_from_several_text_nodes#Examples) on the w3 site.
 
 #### `aria-expanded`
 
@@ -237,7 +250,7 @@ Here is an example:
 In this example, on form submit, the text "The email address is in an invalid format." is added dynamically to the div. When the input is focused, this message will be read aloud to screen readers.
 
 #### `aria-live`
-ARIA-live lets the computer know that an area of the page will be updated later. This is really handy with AJAX stuff. It can have a value of polite, aggressive, or off.
+ARIA-live lets the computer know that an area of the page will be updated later. This is really handy with AJAX stuff. It can have a value of polite, assertive, or off.
 
 ### ARIA means extra context
 
