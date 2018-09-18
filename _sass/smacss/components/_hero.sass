@@ -1,0 +1,88 @@
+.hero-text
+  flex-basis: 50%
+  margin-bottom: 2em
+
+  .page-heading
+    font-size: 2.5rem
+
+  p
+    font-size: 1.25rem
+
+
+
+.hero
+  padding: 2em 0
+
+  @include bp($medium-up)
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+
+
+.hero-form
+  margin: 0 auto
+  font-size: 1.2em
+
+  @include bp($small-up)
+    max-width: 300px
+
+
+  @include bp($large-up)
+    font-size: 1em
+
+  .name-fields
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 1em
+
+  label
+    display: block
+    font-size: .75em
+    margin-bottom: .5em
+    color: #222
+
+  .button
+    width: 100%
+
+  input[type="text"],
+  input[type="email"]
+    padding: .5em .25em
+    border: 1px solid #ccc
+    background: #fff
+    font-size: 0.75em
+    margin-bottom: 1em
+    width: 100%
+
+    &:focus
+      outline: 2px solid $brand-primary
+
+
+.section
+  padding: 1em 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+
+  h2
+    text-align:  center
+
+
+.lessons
+  display: block
+
+.lesson
+  margin-bottom: 1em
+  margin-top: 1em
+
+  @include bp($medium-up)
+    max-width: 50%
+
+.lesson:nth-of-type(even)
+  @include bp($medium-up)
+    margin-left: auto
+
+
+
+.section-img
+  flex-basis: 45%
