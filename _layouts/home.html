@@ -10,7 +10,7 @@ layout: default
         <p>✈️ I help <a href="https://frontendremotejobs.com">front end developers find remote jobs</a>.</p>
     </div>
 
-    <div id="mc_embed_signup" class="">
+    <div id="mc_embed_signup" class="home-email">
         <h2>Free Email Course:<br>Common Accessibility Mistakes and How to Fix Them</h2>
         <p>A month long course to help you simplify web accessibility.</p>
 
@@ -39,7 +39,10 @@ layout: default
             <ul>
                 {% for post in site.posts limit: 5 %}
                     <li>
-                        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a> <date> - {{ post.date | date: "%b %-d, %Y" }}</date>
+                        <article>
+                            <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+                            <p>{{ post.snippet }}</p>
+                        </article>
                     </li>
                 {% endfor %}
             </ul>

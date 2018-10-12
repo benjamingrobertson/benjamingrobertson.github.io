@@ -7,7 +7,7 @@ if(article) {
 }
 
 function addlink(item) {
-    item.insertAdjacentHTML('beforeend', `<a class="heading__anchor-link" href="#${item.id}">#link</a>`);
+    item.insertAdjacentHTML('beforeend', `<a class="heading__anchor-link" href="#${item.id}" aria-label="Anchor link to ${item.textContent}">#link</a>`);
 }
 
 

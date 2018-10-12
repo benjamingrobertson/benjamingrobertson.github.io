@@ -1,11 +1,6 @@
-// .post
-//     margin: 0
-//     max-width: 37.5rem
-//
-//
-// .post-title
-//     font-size: 2.25em
-//
+
+
+
 .heading__anchor-link
     opacity: 0
     display: inline-block
@@ -14,6 +9,13 @@
     vertical-align: middle
     transition: opacity .2s, transform .2s
     transform: translateY(100%)
+    position: absolute
+    top: 0.5em
+
+    &:focus
+        opacity: 1
+        transform: translateY(0)
+
 
 .post-content h2:hover,
 .post-content h3:hover
@@ -23,6 +25,12 @@
         transform: translateY(0)
 
 .post-content
+    h2,
+    h3
+        position: relative
+        padding-right: 0.5em
+        margin-right: -0.5em
+
     img
         max-width: 100%
         height: auto

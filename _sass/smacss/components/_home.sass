@@ -1,11 +1,7 @@
 .home-grid
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
-    grid-gap: 1rem
-
-
-
-
+    grid-gap: 2rem
 
 .home__header h1
     font-size: 2em
@@ -17,13 +13,13 @@
     font-size: 1.4em
     margin-bottom: 1.5em
 
-// .about
-//     font-size: 1.25rem
 
 .snippet
     border-bottom: 1px solid rgba(black, .5)
     padding-bottom: 1em
     margin-bottom: 1em
+    font-size: 0.9em
+    padding: 0 0.5em 1em
 
     date
         color: rgba(black, .5)
@@ -33,8 +29,6 @@
         height: auto
 
 .grid-item
-    // border-left: 1px solid gray
-    // padding-left: 2em
     margin-bottom: 3rem
     padding-bottom: 2rem
     border-bottom: 1px solid black
@@ -118,23 +112,18 @@ article
         margin-top: 1em
 
 
-// .u-photo
-//     border-radius: 50%
-//     width: 100px
-//     height: 100px
-//     float: left
-//     margin: 1em 2em 1em 0
-//     shape-outside: circle(50%)
-//
-//
-// .home__header
-//     h1
-//         text-align: center
-//         margin-bottom: 1em
-//
-//
-// .contact-list
-//     list-style: none
-//     display: flex
-//     justify-content: space-around
-//     padding-left: 0
+.grid-item.blog
+    padding-right: 1em
+
+    ul
+        padding-left: 0
+        list-style-type: none
+
+    li
+        margin-bottom: 1.75em
+
+
+
+
+.home-email
+    padding: 2em 0
