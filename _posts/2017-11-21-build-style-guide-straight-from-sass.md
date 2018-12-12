@@ -2,7 +2,7 @@
 layout: post
 title:  "Build a Style Guide Straight from Sass"
 author: Ben Robertson
-date:   2017-12-30 09:00:00 -0500
+date:   2017-06-01 09:00:00 -0500
 categories: front-end
 snippet: "A little guide I wrote for *CSS-Tricks*."
 canonical: https://css-tricks.com/build-style-guide-straight-sass/
@@ -19,13 +19,17 @@ Something that fit into our existing development workflow would be awesome. Addi
 
 We wanted this to be easily maintainable, and for us that meant keeping the documentation alongside the CSS.</li>
 </ol>
+
 <h3>The Basics of Node-KSS</h3>
 To achieve our goals of a platform agnostic, low-friction style guide, we landed on <a href="https://github.com/kss-node/kss-node">kss-node</a>, which is itself a Node.js implementation of <a href="http://warpspire.com/kss/">Knyle Style Sheets (KSS)</a>, a Ruby library that:
-<blockquote>... provides a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and styleguide format.</blockquote>
+
+> ... provides a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and styleguide format.
+
 The basic principle is that your style guide is generated via comments you create in your CSS, SCSS, Sass, LESS, etc.
 
 You write some CSS like this:
-<pre><code class="language-scss">
+
+```css
 // Bold Button
 //
 // Use this class for a bolder, stronger looking button.
@@ -38,12 +42,17 @@ You write some CSS like this:
     position: relative;
     font-weight: bold;
     text-transform: uppercase;
-}</code></pre>
+}
+```
 
 And get this lovely output:
-<figure id="post-255206" class="align-none media-255206"><img src="https://css-tricks.com/wp-content/uploads/2017/05/Image-2017-05-12-at-4.13.52-PM.png" alt="" /><figcaption>Screenshot of the generated documentation for the bold button</figcaption></figure>
+
+![Screenshot of the generated documentation for the bold button](https://css-tricks.com/wp-content/uploads/2017/05/Image-2017-05-12-at-4.13.52-PM.png)
+
 You are able to organize your documentation however you like and it generates a nice little navigation and document structure for you as well:
-<figure id="post-255207" class="align-none media-255207"><img src="https://css-tricks.com/wp-content/uploads/2017/05/navigation.png" alt="" /></figure>
+
+![An example of a generated KSS navigation sidebar](https://css-tricks.com/wp-content/uploads/2017/05/navigation.png)
+
 Because it lives inside your CSS, updating it fits naturally in existing development workflows. If you update some CSS properties, the style guide is automatically updated. If you need to update the documentation, the documentation text is sitting right on top of the component you are working on. Even if you never visit the generated style guide, you will see the style guide any time you open a CSS file. Low friction? Check.
 
 Additionally, since we use CSS and build processes in all our web projects, it's as platform agnostic as we need it to be.
@@ -51,13 +60,15 @@ Additionally, since we use CSS and build processes in all our web projects, it's
 Let's get started!
 <h3>Initial Setup</h3>
 In your project directory, you want to install kss-node as a project dependency. We're also going to install <a href="https://github.com/stamkracht/michelangelo">michelangelo</a>, a nice theme for the style guide:
-<pre><code>$ npm install --save-dev kss michelangelo</code></pre>
+<pre><code>npm install --save-dev kss michelangelo</code></pre>
 You can verify that it was installed by running
-<pre><code>$ ./node_modules/.bin/kss --version</code></pre>
+<pre><code>./node_modules/.bin/kss --version</code></pre>
 We'll create a file named <code>kss-config.json</code> to configure our KSS settings.
 
 Inside your file, create an object like this (note that my comments below are for reference only, for best results remove them from your config file) :
-<pre><code class="language-javascript">{
+
+```json
+{
   "title": "Title of the Style Guide",
 
   // Source tells KSS where the CSS, Sass, or SCSS is that it should parse for documentation comments.
@@ -84,35 +95,55 @@ Inside your file, create an object like this (note that my comments below are fo
   "js" : [
     "../bundle.js"
   ]
-}</code></pre>
+}
+```
+
 This assumes a simple project directory tree that looks like this:
-<pre><code>js/
+
+```
+js/
 sass/
 bundle.js
 index.html
-main.css</code></pre>
+main.css
+```
+
 You can try compiling your style guide by running:
-<pre><code>$ ./node_modules/.bin/kss --config kss-config.json</code></pre>
-If you want a cleaner command to run, add a script to the scripts block in your <code>package.json</code>:
-<pre><code class="language-javascript">"scripts": {
+
+```
+./node_modules/.bin/kss --config kss-config.json
+```
+
+If you want a cleaner command to run, add a script to the scripts block in your `package.json`:
+
+```js
+"scripts": {
   "kss": "kss --config kss-config.json"
-},</code></pre>
+},
+```
+
 Now you can run <code>$ npm run kss</code> to compile your style guide. (I'll use this method going forward, but you can use <code>$ ./node_modules/.bin/kss --config kss-config.json</code> if you want).
 
 Since we haven't written any documentation yet though, you will likely receive a message like:
-<blockquote>Error: No KSS documentation discovered in source files.</blockquote>
+
+> Error: No KSS documentation discovered in source files.
+
 Let's fix that by documenting our first component!
 <h3>Create and Document a Simple Component</h3>
 We'll create a sample post title component.
 
 Here's our CSS:
-<pre><code class="language-css">.post-title {
+
+```css
+.post-title {
   font-size: 3em;
   text-align: center;
   font-family: fantasy;
-}</code></pre>
+}
+```
+
 To create our documentation, we'll create a comment:
-<pre><code class="language-scss">
+```css
 // Post Title (this will be the title of your component)
 //
 // Large, **in charge**, and centered. (this is the description of your component. you can use markdown in here.)
@@ -128,9 +159,12 @@ To create our documentation, we'll create a comment:
     text-align: center;
     font-family: fantasy;
 }
-</code></pre>
-Run <code>$ npm run kss</code> and your style guide should compile! You can access it based on the destination path you gave it. In this example, we have a static site and I compiled it in <code>/styleguide</code>, so that's the url I will use to find it. Here's what it should look like if you are using the michelangelo theme (I've removed the comments in parentheses):
-<figure id="post-255208" class="align-none media-255208"><img src="https://css-tricks.com/wp-content/uploads/2017/05/post-title.png" alt="" /><figcaption>Post Title Documentation</figcaption></figure>
+```
+
+Run `npm run kss` and your style guide should compile! You can access it based on the destination path you gave it. In this example, we have a static site and I compiled it in `/styleguide`, so that's the url I will use to find it. Here's what it should look like if you are using the michelangelo theme (I've removed the comments in parentheses):
+
+![Post Title Documentation](https://css-tricks.com/wp-content/uploads/2017/05/post-title.png)
+
 Here's what happened:
 <ol>
  	<li>KSS created a documentation section for our post title, complete with the title, description, markup, and CSS that we provided. You can see the rendered HTML and CSS as well as the raw HTML.</li>
@@ -138,25 +172,37 @@ Here's what happened:
  	<li>KSS generated a navigation based on this hierarchy.</li>
 </ol>
 If you wanted to provide more information about Components, you could provide a documentation block (anywhere in your CSS, really) like this:
-<pre><code class="language-scss">// Components
+
+```css
+// Components
 //
 // Components are ingredients of our design system. They may be made up of smaller groups of styles.
 //
-// Styleguide Components</code></pre>
-Likewise, you could provide more information about the article component by defining a documentation block that targets that item via the <code>Styleguide Components.article</code> method:
-<pre><code class="language-scss">// Article
+// Styleguide Components
+```
+
+Likewise, you could provide more information about the article component by defining a documentation block that targets that item via the `Styleguide Components.article` method:
+
+```css
+// Article
 //
 // An article is made up of a title, featured image, and some default
 // typographic settings for links, italics, bold, and blockquotes.
 //
-// Styleguide Components.article</code></pre>
-With those new documentation blocks, compile your style guide again (<code>$ npm run kss</code>) and you will see your outline filled out a little more:
-<figure id="post-255209" class="align-none media-255209"><img src="https://css-tricks.com/wp-content/uploads/2017/05/post-title-update.png" alt="" /><figcaption>Components and article documentation</figcaption></figure>
+// Styleguide Components.article
+```
+
+With those new documentation blocks, compile your style guide again (`npm run kss`) and you will see your outline filled out a little more:
+
+![Components and article documentation](https://css-tricks.com/wp-content/uploads/2017/05/post-title-update.png)
+
 <h3>Documenting Component States and Variations</h3>
 Our post title component is very simple, but we'll need to display more complex information in our style guide. KSS can easily handle variations on components as well as interactive states like <code>:hover</code> or <code>:focus</code>. We'll document a button to show this.
 
 Our button will have different styles for <code>:focus</code> and <code>:hover</code>, as well as a small variation and a large variation. Here is the CSS we'll start with:
-<pre><code class="language-css">.button {
+
+```css
+.button {
   padding: 1em 2em;
   margin: .5em;
   display: inline-block;
@@ -186,9 +232,13 @@ Our button will have different styles for <code>:focus</code> and <code>:hover</
 
 .button--large {
   font-size: 1.5em;
-}</code></pre>
+}
+```
+
 We'll format our documentation the same as we did for our post title with 2 additions: we're going to add a placeholder class of <code>{{modifier_class}}</code> to all of our elements that will get the modifier, and we'll define our states / variations directly underneath our markup. Our comment block will look like this (I've added some notes in parentheses):
-<pre><code class="language-scss">// Buttons (title, same as before)
+
+```css
+// Buttons (title, same as before)
 //
 // Various button styles. (description, just as before)
 //
@@ -203,13 +253,24 @@ We'll format our documentation the same as we did for our post title with 2 addi
 // .button--small - A small button.
 // .button--large - A large button.
 //
-// Styleguide Components.button (organization, just as before)</code></pre>
+// Styleguide Components.button (organization, just as before)
+```
+
 You can see that I've added a variation for each of the variations I declared in my CSS. The format is:
-<pre><code class="language-scss">// .class-name - Description</code></pre>
+
+```css
+// .class-name - Description
+```
+
 or
-<pre><code class="language-scss">// :state - Description</code></pre>
+```css
+// :state - Description
+```
+
 When the styleguide is compiled, you get this new documentation:
-<figure id="post-255210" class="align-none media-255210"><img src="https://css-tricks.com/wp-content/uploads/2017/05/buttons.png" alt="" /><figcaption>Generated documentation for buttons</figcaption></figure>
+
+![Generated documentation for buttons](https://css-tricks.com/wp-content/uploads/2017/05/buttons.png)
+
 You can see that you now have an example of each of the states and variations that you described in the modifiers section, with the appropriate CSS applied.
 
 This technique also works for more complex components than this button. Say you have a <code>.card</code> component with children elements inside that need to change when a user hovers over the card. To document that, you would add the <code>{{modifier_class}}</code> only to the <code>.card</code> element and specify the hover state just as we did above.
@@ -217,7 +278,9 @@ This technique also works for more complex components than this button. Say you 
 By default, sections will be organized alphabetically by their title. For instance, our button component will come after our article component in the examples above. However, if you want to change the order of components or other sections, you can provide a weight to the component. A higher weight will bring the component lower in its section. A lower weight will move the component higher in the section.
 
 When using Sass or SCSS, I put my organizational comments inside my <code>main.sass</code> or wherever I am importing my partials. For example, on a recent project, I had a Typography section and Elements section both filed underneath a Base top-level section. Naturally, KSS would organize these sections alphabetically, but I wanted Typography to come first. Here's how I changed the weight in my <code>main.sass</code> file:
-<pre><code class="language-scss">// Typography
+
+```
+// Typography
 //
 // Weight: 1
 //
@@ -229,12 +292,16 @@ When using Sass or SCSS, I put my organizational comments inside my <code>main.s
 // Weight: 2
 //
 // Styleguide base.elements
-@import "base/elements"</code></pre>
+@import "base/elements"
+```
+
 <h3>Color Palettes</h3>
 The Michelangelo theme that we are using provides a cool color palette generator. If you are using Sass or SCSS, you can document your color variable names and KSS will format a little color palette block.
 
 With a comment like this:
-<pre><code class="language-scss">// Highlight Colors
+
+```
+// Highlight Colors
 //
 // Colors we use for higlighting states.
 //
@@ -242,9 +309,13 @@ With a comment like this:
 // $highlight-purple - #674172, secondary purple
 // $highlight-red - #d50000, danger red
 //
-// Styleguide Base.colors</code></pre>
+// Styleguide Base.colors
+```
+
 KSS will create a color palette for easy reference like this:
-<figure id="post-255211" class="align-none media-255211"><img src="https://css-tricks.com/wp-content/uploads/2017/05/colors.png" alt="" /></figure>
+
+![Color palette displaying primary blue, secondary purple, and danger red.](https://css-tricks.com/wp-content/uploads/2017/05/colors.png)
+
 <h3>Auto Compiling the Style Guide</h3>
 Instead of running <code>$ npm run kss</code> every time we make a change to the CSS, we can add a watch task to regenerate the style guide every time our CSS files change. I'll document how to do it with npm Scripts and via Grunt next.
 <h4>npm Scripts</h4>

@@ -1,6 +1,6 @@
 # Designing Layouts for Screen Readers
 
-There are two major benefits of purpsosefully designing web layouts for assistive technology users. The obvious one is that it creates a better experience for those users, making your content widely available to a diverse audience of people. The second is that it can help you broaden the way you think about layout.
+There are two major benefits of purposefully designing web layouts for assistive technology users. The obvious one is that it creates a better experience for those users, making your content widely available to a diverse audience of people. The second is that it can help you broaden the way you think about layout.
 
 It's easy to think about a layout as being a primarily visual concern. The header goes up top, the sidebar is over here, the call to action is in an overlay on top of the content (just kidding). Grids, borders, spacing and color all portray valuable visual data, but if these hints to the structure of a page are only visible, some users may find your content unintelligible.
 
