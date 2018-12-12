@@ -136,3 +136,6 @@ Now an assistive technology user has an equal (and maybe even better) conceptual
 - [Labelling Landmarks](https://www.w3.org/TR/WCAG20-TECHS/ARIA13.html)
 
 ## Wrap Up
+With a combination of well-structured HTML markup, thoughtful use of ARIA roles and a careful labeling of site sections using ARIA labels, we’re able to create a user experience for assistive technology users that rivals the experience of non-assistive technology users. We were able to take the conceptual map that was implicit in our visual layout and expose it to assistive technology.
+
+You may find holes in your conceptual map or sections that unnecessarily have the same function. The process can help you clarify your designs, identify areas that might not make sense conceptually or visually, and improve your design for all users of your site.
