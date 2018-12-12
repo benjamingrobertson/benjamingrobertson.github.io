@@ -1,6 +1,12 @@
-# Designing Layouts for Screen Readers
-
-There are two major benefits of purposefully designing web layouts for assistive technology users. The obvious one is that it creates a better experience for those users, making your content widely available to a diverse audience of people. The second is that it can help you broaden the way you think about layout.
+---
+layout: post
+title:  "Designing Layouts for Screen Readers"
+author: Ben Robertson
+date:   2018-12-11 09:00:00 -0500
+categories: accessibility
+snippet: "You may think of layouts has being a primarily visual concern. Let's rethink that."
+canonical: https://www.upandup.agency/accessibility/understanding-layout-screen-readers
+---
 
 It's easy to think about a layout as being a primarily visual concern. The header goes up top, the sidebar is over here, the call to action is in an overlay on top of the content (just kidding). Grids, borders, spacing and color all portray valuable visual data, but if these hints to the structure of a page are only visible, some users may find your content unintelligible.
 
@@ -12,17 +18,22 @@ Experiences like this are caused by websites that are built with layouts that ar
 
 I'll walk through how to make use of these indicators to make a simple web page easy to use, navigate and read for users of assistive technology. All the example code is available on [github](https://github.com/mergeweb/screen-reader-layout-post).
 
+<small>*Want to up your accessibility game? Checkout my free email course: <br> ✉️ [Common accessibility mistakes and how to avoid them](/courses/common-accessibility-mistakes/).*</small>
+
 ## Initial Layout
 
 Here's an example of a page with a pretty simple layout. We've got a header at the top containing a logo and navigation, some body content, a sidebar off to the right with a related posts list and a list of social media sharing links, a search box below the content and a footer containing the contact info of our business.
+
+[![Screenshot of the initial layout. Click on the image to preview the page.](/assets/img/designing-layouts-for-sr/initial-layout.png)](https://mergeweb.github.io/screen-reader-layout-post/)
 
  - [Preview the initial layout](https://mergeweb.github.io/screen-reader-layout-post/)
  - [View the HTML](https://github.com/mergeweb/screen-reader-layout-post/blob/master/index.html)
 
 Visually, the content is pretty well divided, using a simple grid and background colors to distinguish the different elements. If you fire up VoiceOver on this page, you can navigate through the page pretty well using the next element command. The order of elements in the markup pretty much follows the visual order of elements. First we read the header, then the body copy, then the sidebar, then the search box, then the footer. That's pretty good. If I press `CAPS + U` to pull up the VoiceOver menus, I can get a list of all the headers on the page and all the links, and navigate directly to them.
 
-IMAGE: https://cl.ly/lngz
-IMAGE: https://cl.ly/lnC5
+![VoiceOver will display a navigable list of all headings on a page.](/assets/img/designing-layouts-for-sr/header-menu.png)
+
+![VoiceOver will also display a navigable list of all links on a page.](/assets/img/designing-layouts-for-sr/link-menu.png)
 
 Just by using well-structured HTML, simple grouping with `<div>` elements and a good use of heading tags we've got a decent experience. It's better than the rambling story websites I mentioned above, but it could be even better.
 
@@ -100,8 +111,6 @@ Now when I fire up VoiceOver and press `CAPS + U`, I get a new Landmarks menu. I
 - search
 - content information
 
-IMAGE: https://cl.ly/lmw4
-
 Selecting any of these menu items takes the user straight to that element, so they can easily navigate through the different elements of a page. If they are at the bottom of the page, they can easily get back to the main navigation in the header via the Landmarks menu.
 
 ### WCAG Techniques Used
@@ -127,7 +136,7 @@ In this next iteration, I've added the following labels:
 
 Let's fire up VoiceOver again and pull up our Landmark menu with `CAPS+U`. Now we see that the ARIA labels we provided display next to each of our generic menu items. We also have a few extra menu items, because the `<section>` elements we provided labels for (Related Posts, Share Links), now have their own menu items.
 
-IMAGE: https://cl.ly/lnSI
+![The VoiceOver landmarks menu now shows detailed information about each of the sections on our page, including the aria-labels that we provided.](/assets/img/designing-layouts-for-sr/landmarks-detail.png)
 
 Now an assistive technology user has an equal (and maybe even better) conceptual map of the content and actions they can take on this website compared to a non-assistive technology user. They can get a quick overview of everything on the site, easily navigate to the section of the page they want, and quickly find what they are looking for.
 
@@ -139,3 +148,5 @@ Now an assistive technology user has an equal (and maybe even better) conceptual
 With a combination of well-structured HTML markup, thoughtful use of ARIA roles and a careful labeling of site sections using ARIA labels, we’re able to create a user experience for assistive technology users that rivals the experience of non-assistive technology users. We were able to take the conceptual map that was implicit in our visual layout and expose it to assistive technology.
 
 You may find holes in your conceptual map or sections that unnecessarily have the same function. The process can help you clarify your designs, identify areas that might not make sense conceptually or visually, and improve your design for all users of your site.
+
+*Want to dive deeper into building accessible websites? Join my free email course:* 📨 *[Common accessibility mistakes and how to avoid them](/courses/common-accessibility-mistakes/). 30 days, 10 lessons, 100% fun!* 😀 [*Sign up here*](/courses/common-accessibility-mistakes/)!
