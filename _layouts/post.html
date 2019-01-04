@@ -32,30 +32,21 @@ comments: true
     </article>
 </div>
 
-{% comment %}
-{% if page.categories contains "accessibility" %}
-    {% include signup-awd.html
-        listId="5f1a877f43"
-        calloutColor="red"
-        title="Learn to develop accessible web sites and applications."
-        content="Sign up to hear when the book launches."
-        submit="Subscribe"
+{% if page.listId %}
+    {% include signup.html
+        listId=page.listId
+        title=page.formTitle
+        content=page.formContent
+        submit=page.formCTA
+        group=page.interestGroup
     %}
 {% else %}
     {% include
         signup.html
-        listId="6e6d0bd232"
-        title="Learn something from this post?"
-        content="I'd love your email address so I can send you more posts like this whenever they're published."
-        submit="Subscribe"
-        %}
-{% endif %}
-{% endcomment %}
-
-{% include
-    signup.html
-    listId="baaa94d97b"
-    title="Free Email Course: <br>Common Accessibility Mistakes and How to Fix Them"
-    content="A month long course to help you simplify web accessibility."
-    submit="Sign me up!"
+        title="Free Email Course: <br>Common Accessibility Mistakes and How to Fix Them"
+        content="A month long course to help you simplify web accessibility."
+        submit="Sign me up!"
+        group="group[5107][4]"
+        listId='6e6d0bd232'
     %}
+{% endif %}

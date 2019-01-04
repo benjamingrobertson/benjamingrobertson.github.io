@@ -1,21 +1,25 @@
 <!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup" class="mc-signup callout">
+<div id="signup" class="mc-signup callout">
     <h2>{{ include.title }}</h2>
     <p>{{ include.content }}</p>
 
     <form
-    action="//benjamingrobertson.us15.list-manage.com/subscribe/post?u=aafc0f8e65dbc564446043b15&amp;id={{ include.listId }}"
-    method="post"
-    id="mc-embedded-subscribe-form"
-    name="mc-embedded-subscribe-form"
-    class="validate"
-    target="_blank"
-    novalidate>
+        action="//benjamingrobertson.us15.list-manage.com/subscribe/post?u=aafc0f8e65dbc564446043b15&amp;id={{ include.listId }}"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        class="validate"
+        target="_blank"
+        novalidate
+    >
         <div id="mc_embed_signup_scroll" class="mc-signup__form-group">
             <div class="mc-field-group">
                 <label for="mce-EMAIL">Email Address </label>
                 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
             </div>
+            {% if include.group %}
+                <input hidden type="checkbox" checked name="{{include.group}}" value="1" />
+            {% endif %}
             <div id="mce-responses" class="clear">
                 <div class="response" id="mce-error-response" style="display:none"></div>
                 <div class="response" id="mce-success-response" style="display:none"></div>
