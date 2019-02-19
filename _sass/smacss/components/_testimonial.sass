@@ -1,0 +1,19 @@
+.testimonial-grid
+  display: flex
+  overflow-x: scroll
+
+  @include bp(medium)
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr))
+    grid-gap: 10px
+
+.testimonial
+  min-width: 250px
+  max-width: 95%
+
+  font-size: 0.9em
+  margin: 1em 0 1em 2em
+  background-color: #eeeeee
+  padding: 1em 2em
+  border-bottom: 5px solid $brand-primary
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.25)
