@@ -3,3 +3,4 @@
 <meta property="og:url" content="{{| page.url | replace:'index.html','' | absolute_url }}" />
 <meta property="og:title" content="{{ page.title }}" />
 <meta property="og:description" content="{{ page.snippet | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+<meta property="og:type" content="article">
