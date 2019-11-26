@@ -80,7 +80,13 @@ This full day training session starts with an overview of component-driven devel
 ## Experience
 
 ### Mediacurrent
-**Front End Developer** | December 2017 - Present
+**Senior Frontend Developer** | December 2017 - Present
+
+- Lead front end development for complex architectures utilizing **Gatsby, Drupal, Auth0, and Apollo Server**.
+- Define requirements, **estimate** new features, **review** pull requests and provide **constructive feedback** for other front end developers.
+- Refactor a complex **React/Redux** application for a major insurance company, increasing stability and maintainability of code and introduced unit testing strategy to **increase test coverage by 1370%**.
+- Perform accessibility remediation for enterprise clients to bring them into **WCAG 2.1 AA** compliance.
+- Speak and write effectively on various front end development topics including [accessibility](https://www.mediacurrent.com/blog/5-website-accessibility-checkers), [component-driven development](https://www.mediacurrent.com/blog/join-our-drupalcon-training-session-component-based-development-using-ui-patterns/), [React](https://www.mediacurrent.com/blog/myth-inaccessible-react), [Gatsby](https://www.youtube.com/watch?v=QiocnDGnKfs&index=6&t=0s&list=PLCU2qJekvcN1wzgVKymbjbGtZ3VgAWOdj), and [remote work](https://www.mediacurrent.com/blog/improve-your-remote-work-productivity-shutdown-ritual).
 
 ### Up&Up Agency
 **Front End Developer** \| February 2015 - November 2017
