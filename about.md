@@ -10,19 +10,83 @@ I create fun, innovative, accessible, and fast websites. I try to leave every bi
 
 These are the accomplishments I'm most proud of:
 
- - Spearheaded the agency use of pattern libraries and wrote about it for [CSS-Tricks](https://css-tricks.com/build-style-guide-straight-sass/).
- - Developed an internal [CSS style guide](/front-end/css-standards) for standardizing our approach to CSS/Sass for across all projects.
- - Led the agency adoption of SVG and automated build tools.
+ - Speaking at the first ever Gatsby Days conference on [trends in modern web development](https://benrobertson.io/general/trends-in-modern-web-development)
+ - Wrote and marketed an [email course on web accessibility](https://benrobertson.io/courses/common-accessibility-mistakes/) to 500+ developers
+ - Spearheaded the agency use of pattern libraries at my first job and wrote about it for [CSS-Tricks](https://css-tricks.com/build-style-guide-straight-sass/).
  - Learned Drupal 7 on the fly, developed an [award-winning Drupal 7 site for the University of Kentucky](https://www.upandup.agency/awards/upup-wins-ucda-excellence-award-university-kentucky-website) and became lead Drupal developer.
- - Led the team in documenting front-end and server configuration best practices to streamline current development and help onboard new developers.
+ - Led the team at my first job in documenting front-end and server configuration best practices to streamline current development and help onboard new developers.
 
 
-<hr>
+<hr />
+
+## Speaking
+
+### Gatsby at Mediacurrent
+
+- **Event:** Gatsby for Agencies and Teams: Better, Faster, Smarter Webinar
+- **Date:** March 2019
+- [Recording](https://www.youtube.com/watch?v=jRntYO4186Y)
+
+In this webinar I shared a little bit about how we've introduced Gatsby into our workflow at Mediacurrent and how things have changed as a result.
+
+I discuss:
+
+- how Gatsby has changed our development process
+- how Gatsby has influenced the types of projects we are able to take on
+- how even things like hiring and advancement are changing as well
+
+### Move Fast, Don’t Break Things: Trends in Modern Web Dev
+
+- **Event**: Gatsby Days
+- **Date**: December 2018
+- [Recording](https://www.gatsbyjs.com/gatsby-days-mediacurrent-ben)
+
+In this talk at the first Gatsby Days event, I discuss how trends in modern web development and moving away from "CMS-Centered Development". I share a case study from our first decoupled Drupal and Gatsby project at Mediacurrent.
+
+I also discuss the different ways decoupling can change things at an organization, including the development process, but even beyond into hiring and client diversity.
+
+### Common Accessibility Mistakes and How to Avoid Them
+
+- **Event**: DrupalCamp Asheville
+- **Date**: July 2018
+- [Recording](https://benrobertson.io/accessibility/common-accessibility-mistakes-and-how-to-avoid-them)
+
+I discussed four of my own homegrown principles for developing accessible websites:
+
+1. Web Design is more than graphic design
+2. Be ASAP: As Semantic As Possible
+3. Websites should look good naked
+4. Talk to your computer (Use ARIA attributes)
+
+I also covered 10 common accessibility mistakes that I come across (and that I’ve personally made), and how to fix them.
+
+### Component Based Development
+
+- **Event**: DrupalCon Nashville
+- **Date**: April 2018
+- [Overview](https://benrobertson.io/announcements/component-driven-development-ui-patterns)
+
+This full day training session starts with an overview of component-driven development, typical workflows, and benefits for teams and stakeholders, and then we dive deep into the workflow by building out a sample Drupal theme using the UI Patterns approach. We cover:
+
+- An in-depth look at creating patterns including markup, styles, and behaviors
+- Composing complex UI patterns by nesting simple patterns in larger patterns
+- Integrating front-end patterns with Drupal using the UI Patterns module to simplify the process and preserve Drupal’s baked in goodies
+- Advanced workflows with Sass, a Drupal 8 theme generator, incorporating ES6/Babel with patterns
+
+
+
+<hr />
 
 ## Experience
 
 ### Mediacurrent
-**Front End Developer** | December 2017 - Present
+**Senior Frontend Developer** | December 2017 - Present
+
+- Lead front end development for complex architectures utilizing **Gatsby, Drupal, Auth0, and Apollo Server**.
+- Define requirements, **estimate** new features, **review** pull requests and provide **constructive feedback** for other front end developers.
+- Refactor a complex **React/Redux** application for a major insurance company, increasing stability and maintainability of code and introduced unit testing strategy to **increase test coverage by 1370%**.
+- Perform accessibility remediation for enterprise clients to bring them into **WCAG 2.1 AA** compliance.
+- Speak and write effectively on various front end development topics including [accessibility](https://www.mediacurrent.com/blog/5-website-accessibility-checkers), [component-driven development](https://www.mediacurrent.com/blog/join-our-drupalcon-training-session-component-based-development-using-ui-patterns/), [React](https://www.mediacurrent.com/blog/myth-inaccessible-react), [Gatsby](https://www.youtube.com/watch?v=QiocnDGnKfs&index=6&t=0s&list=PLCU2qJekvcN1wzgVKymbjbGtZ3VgAWOdj), and [remote work](https://www.mediacurrent.com/blog/improve-your-remote-work-productivity-shutdown-ritual).
 
 ### Up&Up Agency
 **Front End Developer** \| February 2015 - November 2017
