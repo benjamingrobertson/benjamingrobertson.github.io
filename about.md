@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-Hi, I’m Ben, a front-end web developer in Greenville, SC for [Mediacurrent](http://www.mediacurrent.com/). In my free time I enjoy biking, hiking, gardening, exploring Greenville, learning new things, and hanging out at our awesome public library.
+Hi, I’m Ben, a senior software engineer in Greenville, SC for [Gatsby](https://www.gatsbyjs.com/). In my free time I enjoy hiking, spending time with my wife and children, and learning to play the banjo.
 
 I create fun, innovative, accessible, and fast websites. I try to leave every bit I code I touch more readable, performant and accessible than I found it.
 
@@ -79,8 +79,12 @@ This full day training session starts with an overview of component-driven devel
 
 ## Experience
 
+### Gatsby
+**Senior Software Engineer, Customer Success** | January 2020 - Present
+Helping customers succeed using Gatsby beyond their wildest dreams!
+
 ### Mediacurrent
-**Senior Frontend Developer** | December 2017 - Present
+**Senior Frontend Developer** | December 2017 - January 2020
 
 - Lead front end development for complex architectures utilizing **Gatsby, Drupal, Auth0, and Apollo Server**.
 - Define requirements, **estimate** new features, **review** pull requests and provide **constructive feedback** for other front end developers.
@@ -137,6 +141,7 @@ This full day training session starts with an overview of component-driven devel
  - I developed the front end and backend.
 
 #### Technologies Used:
+
  - HTML5
  - Sass
  - CSS
